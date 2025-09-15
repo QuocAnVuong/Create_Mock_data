@@ -3,359 +3,304 @@ const path = require('path');
 const yaml = require('yaml');
 const axios = require('axios');
 
+// Paths
+const ROOT = __dirname;
+const CONFIG_PATH = path.join(ROOT, 'config.yaml');
+const CASE_RECORDS_PATH = path.join(ROOT, 'case_records.json');
+const USED_UNIQUE_STRINGS_PATH = path.join(ROOT, 'usedUniqueStrings.json');
+const PREPAYMENT_DATA_PATH = path.join(ROOT, 'Prepayment_Data.json');
+
 // Load configuration
-const config = yaml.parse(fs.readFileSync(path.join(__dirname, 'config.yaml'), 'utf8'));
+const config = yaml.parse(fs.readFileSync(CONFIG_PATH, 'utf8')) || {};
+const companies = Array.isArray(config.Company)
+  ? config.Company
+  : (config.Company && typeof config.Company === 'object')
+    ? Object.keys(config.Company)
+    : [];
 
-// File to store used unique strings
-const uniqueStringsFile = path.join(__dirname, 'usedUniqueStrings.json');
+// Endpoint details (adapt to your config)
+const endpoint = (config.endpoint && (config.endpoint.IF_013)) || {};
+if (!endpoint.url || !endpoint.username || !endpoint.password) {
+  console.warn('Endpoint is missing url/username/password in config.yaml.');
+}
 
-// File to store SO numbers and billing numbers
-const soTrackingFile = path.join(__dirname, 'USD.json');
+const PREPAYMENT_CURRENCY = (config.prepaymentCurrency || 'USD').toUpperCase();
+const MAX_MANY_TO_ONE = Number.isFinite(config.MaxNumberOneToMany) ? Math.max(2, config.MaxNumberOneToMany) : 3;
+const NET_MIN = Number.isFinite(config.NetAmount?.Min) ? config.NetAmount.Min : 500;
+const NET_MAX = Number.isFinite(config.NetAmount?.Max) ? config.NetAmount.Max : 2500;
 
-// Load existing unique strings or initialize empty set
+// Load case records
+const caseRecordsRaw = JSON.parse(fs.readFileSync(CASE_RECORDS_PATH, 'utf8'));
+const caseList = Array.isArray(caseRecordsRaw.record) ? caseRecordsRaw.record.map(r => r.case) : [];
+
+// Load used unique strings
 let usedUniqueStrings = new Set();
-if (fs.existsSync(uniqueStringsFile)) {
-  const savedStrings = JSON.parse(fs.readFileSync(uniqueStringsFile, 'utf8'));
-  usedUniqueStrings = new Set(savedStrings);
+if (fs.existsSync(USED_UNIQUE_STRINGS_PATH)) {
+  try {
+    const saved = JSON.parse(fs.readFileSync(USED_UNIQUE_STRINGS_PATH, 'utf8'));
+    usedUniqueStrings = new Set(Array.isArray(saved) ? saved : []);
+  } catch (_) {}
 }
 
-// Initialize empty SO tracking for each run
-let soTracking = {};
-
-// Generate random net amount based on config
-function generateRandomNetAmount() {
-  const min = config.NetAmount.Min;
-  const max = config.NetAmount.Max;
-  // Generate random integer between min and max (inclusive)
-  const amount = Math.floor(Math.random() * (max - min + 1)) + min;
-  return amount;
+function saveUsedUniqueStrings() {
+  fs.writeFileSync(USED_UNIQUE_STRINGS_PATH, JSON.stringify(Array.from(usedUniqueStrings), null, 2), 'utf8');
 }
 
-// Save unique strings to file
-function saveUniqueStrings() {
-  fs.writeFileSync(uniqueStringsFile, JSON.stringify(Array.from(usedUniqueStrings), null, 2), 'utf8');
-}
-
-// Save SO tracking to file
-function saveSOTracking() {
-  fs.writeFileSync(soTrackingFile, JSON.stringify(soTracking, null, 2), 'utf8');
-}
-
-// Extract billing number from status description
 function extractBillingNumber(statusDescription) {
-  if (!statusDescription) return null;
-  
-  // Look for pattern like "billing number 1SA5000078"
+  if (!statusDescription || typeof statusDescription !== 'string') return null;
   const match = statusDescription.match(/billing number (\w+)/i);
   return match ? match[1] : null;
 }
 
-// Add response to SO tracking
-function addToSOTracking(companyCode, type, iteration, response, uniqueString, amount) {
-  if (response && response.SO_Number__c) {
-    const soNumber = response.SO_Number__c;
-    
-    // Use company code as key, initialize if it doesn't exist
-    if (!soTracking[companyCode]) {
-      soTracking[companyCode] = {
-        "SoNumber": soNumber,
-        "Records": []
-      };
-    }
-    
-    // Extract billing number from status description
-    const billingNumber = extractBillingNumber(response.Status_Description__c);
-    
-    if (billingNumber) {
-      soTracking[companyCode].Records.push({
-        "BillingNumber": billingNumber,
-        "PrepaymentRequestnumber": uniqueString,
-        "Amount": amount
-      });
-    }
-    
-    saveSOTracking();
-  }
+function generateRandomNetAmount() {
+  const min = Math.floor(NET_MIN);
+  const max = Math.floor(NET_MAX);
+  return Math.floor(Math.random() * (max - min + 1)) + min; // inclusive
 }
 
 function generateUniqueId(length = 8) {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   let result = '';
-  
-  // Keep generating until we get a unique string
+  let attempts = 0;
   do {
     result = '';
     while (result.length < length) {
       const char = chars.charAt(Math.floor(Math.random() * chars.length));
       if (!result.includes(char)) result += char;
     }
+    attempts++;
+    if (attempts > 1000) break; // extreme safety
   } while (usedUniqueStrings.has(result));
-  
-  // Add to used strings set and save
   usedUniqueStrings.add(result);
-  saveUniqueStrings();
+  saveUsedUniqueStrings();
   return result;
 }
 
-// Create prepayment for a given company code
-async function createPrepayment(companyCode, type) {
-  // Generate unique ID and SFID
-  const uniqueString = generateUniqueId();
-  const SFID = `TEST${companyCode}${uniqueString}`;
+function parseCaseType(caseString) {
+  if (!caseString) return { relation: 'OneToOne', mood: null, deliveryType: null };
+  const [relation, mood, deliveryType] = caseString.split('-');
+  return { relation, mood, deliveryType };
+}
 
-  // Load company JSON
-  const filePath = path.join(__dirname, 'First', `${companyCode}.json`);
-  if (!fs.existsSync(filePath)) throw new Error(`File not found for company code: ${companyCode}`);
-  const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-
-  // Generate random amount for tracking
-  let randomAmount = null;
-
-  // Update fields
-  jsonData.SalesOrder.forEach(order => {
-    order.SalesOrderItemsSet = [SFID];
-    
-    // Update currency if type is not Local
-    if (type !== 'Local') {
-      const currency = type.toUpperCase();
-      order.TransactionCurrency = currency;
-    }
-    
-    order.SalesOrderItem.forEach(item => {
-      item.YY1_SFDCLINEID_I = SFID;
-      item.YY1_SALESFORCEID_I = SFID;
-      item.PrepaymentRequestnumber = uniqueString;
-      item.YY1_BATCHID_I = uniqueString;
-      randomAmount = generateRandomNetAmount();
-      
-      // Update currency in PricingElement if type is not Local
-      if (item.PricingElement && Array.isArray(item.PricingElement)) {
-        item.PricingElement.forEach(pricing => {
-          // Update currency if type is not Local
-          if (type !== 'Local') {
-            const currency = type.toUpperCase();
-            pricing.ConditionCurrency = currency;
-          }
-          
-          // Update ZSFN ConditionRateValue with random net amount
-          if (pricing.ConditionType === 'ZSFN') {
-            pricing.ConditionRateValue = randomAmount;
-          }
-          
-        });
-      }
-      if (item.to_billingplan && Array.isArray(item.to_billingplan)) {
-        item.to_billingplan.forEach(billingPlan => {
-          if (billingPlan.to_billingplanitem && Array.isArray(billingPlan.to_billingplanitem)) {
-            billingPlan.to_billingplanitem.forEach(billingPlanItem => {
-              billingPlanItem.BillingPlanAmount = randomAmount;
-            });
-          }
-        });
-      }
-    });
-  });
-
-  // Create company folder if it doesn't exist
-  const companyFolderPath = path.join(__dirname, companyCode);
-  const typeFolderPath = path.join(companyFolderPath, type.toLowerCase());
-  if (!fs.existsSync(typeFolderPath)) {
-    fs.mkdirSync(typeFolderPath, { recursive: true });
+function timesForCase(relation) {
+  if (relation === 'ManyToOne') {
+    const count = Math.floor(Math.random() * (MAX_MANY_TO_ONE - 2 + 1)) + 2; // [2..MAX]
+    return count;
   }
+  // OneToOne, OneToMany -> 1 send
+  return 1;
+}
 
-  // Save the initial JSON before calling the URL
-  const initialFilePath = path.join(typeFolderPath, `initial_${type.toLowerCase()}.json`);
-  fs.writeFileSync(initialFilePath, JSON.stringify(jsonData, null, 2), 'utf8');
+function clone(obj) {
+  return JSON.parse(JSON.stringify(obj));
+}
 
-  // Send request
-  const { url, username, password } = config.endpoint.IF_013;
-  const response = await axios.post(url, jsonData, {
-    headers: { 'Content-Type': 'application/json', env: 'Test', mode: 'debug' },
-    auth: { username, password }
-  });
+function loadBaseJson(companyCode) {
+  const filePath = path.join(ROOT, 'Sample', 'Prepayment', `${companyCode}.json`);
+  if (!fs.existsSync(filePath)) {
+    throw new Error(`Base JSON not found for company ${companyCode} at ${filePath}`);
+  }
+  return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+}
 
-  console.log(`${companyCode} ${type} Initial Response:`, response.data);
+function applyPrepaymentEdits(jsonData, { companyCode, currency, uniqueString, sfid, amount }) {
+  if (!jsonData || !jsonData.SalesOrder) return jsonData;
 
-  // Add to SO tracking
-  addToSOTracking(companyCode, type, 'initial', response.data, uniqueString, randomAmount);
+  jsonData.SalesOrder.forEach(order => {
+    // Ensure set fields
+    order.SalesOrderItemsSet = [sfid];
+    if (currency) order.TransactionCurrency = currency;
 
-  // Extract SO_Number__c from response and update SalesOrder fields
-  if (response.data && response.data.SO_Number__c) {
-    const soNumber = response.data.SO_Number__c;
-
-    // Update all SalesOrder fields in the JSON data
-    jsonData.SalesOrder.forEach(order => {
-      order.SalesOrder = soNumber;
+    if (Array.isArray(order.SalesOrderItem)) {
       order.SalesOrderItem.forEach(item => {
-        item.SalesOrder = soNumber;
-        
-        // Update SalesOrder in PricingElement array
-        if (item.PricingElement && Array.isArray(item.PricingElement)) {
-          item.PricingElement.forEach(pricing => {
-            pricing.SalesOrder = soNumber;
+        item.YY1_SFDCLINEID_I = sfid;
+        item.YY1_SALESFORCEID_I = sfid;
+        item.PrepaymentRequestnumber = uniqueString;
+        item.YY1_BATCHID_I = uniqueString;
+
+        if (Array.isArray(item.PricingElement)) {
+          item.PricingElement.forEach(pe => {
+            if (currency) pe.ConditionCurrency = currency;
+            if (pe.ConditionType === 'ZSFN') {
+              pe.ConditionRateValue = amount;
+            }
           });
         }
-        
-        // Update SalesOrder in ItemText array
-        if (item.ItemText && Array.isArray(item.ItemText)) {
-          item.ItemText.forEach(text => {
-            text.SalesOrder = soNumber;
-          });
-        }
-        
-        // Update SalesOrder in to_billingplan array
-        if (item.to_billingplan && Array.isArray(item.to_billingplan)) {
-          item.to_billingplan.forEach(billing => {
-            billing.SalesOrder = soNumber;
-            
-            // Update SalesOrder in to_billingplanitem if it exists
-            if (billing.to_billingplanitem && Array.isArray(billing.to_billingplanitem)) {
-              billing.to_billingplanitem.forEach(billingItem => {
-                billingItem.SalesOrder = soNumber;
+
+        if (Array.isArray(item.to_billingplan)) {
+          item.to_billingplan.forEach(bp => {
+            if (Array.isArray(bp.to_billingplanitem)) {
+              bp.to_billingplanitem.forEach(bpi => {
+                bpi.BillingPlanAmount = amount;
               });
             }
           });
         }
       });
-    });
-  }
+    }
+  });
 
-  return { responseData: response.data, finalJson: jsonData };
+  return jsonData;
 }
 
-// Function to process multiple prepayments based on config
-async function processMultiplePrepayments(companyCode, baseJson, type) {
-  const count = config.Company[companyCode]?.[type];
-  
-  if (count === undefined || count === null) {
-    throw new Error(`${type} count not found for company code: ${companyCode}`);
-  }
-  
-  // If count is 0, return empty results without processing
-  if (count === 0) {
-    return [];
-  }
-  
-  const results = [];
-  
-  for (let i = 0; i < count; i++) {
-    // Create a deep copy of the base JSON to avoid modifying the original
-    const jsonData = JSON.parse(JSON.stringify(baseJson));
-    
-    // Generate new unique string and SFID
-    const uniqueString = generateUniqueId();
-    const SFID = `TEST${companyCode}${uniqueString}`;
-    
-    // Generate random amount for tracking
-    let randomAmount = null;
-    
-    // Update fields with new unique values
-    jsonData.SalesOrder.forEach(order => {
-      order.SalesOrderItemsSet = [SFID];
-      
-      // Update currency if type is not Local
-      if (type !== 'Local') {
-        const currency = type.toUpperCase();
-        order.TransactionCurrency = currency;
-      }
-      
+function setSalesOrderInPayload(jsonData, soNumber) {
+  if (!jsonData || !jsonData.SalesOrder || !soNumber) return jsonData;
+  jsonData.SalesOrder.forEach(order => {
+    order.SalesOrder = soNumber;
+    if (Array.isArray(order.SalesOrderItem)) {
       order.SalesOrderItem.forEach(item => {
-        item.YY1_SFDCLINEID_I = SFID;
-        item.YY1_SALESFORCEID_I = SFID;
-        item.PrepaymentRequestnumber = uniqueString;
-        item.YY1_BATCHID_I = uniqueString;
-        
-        // Update currency in PricingElement if type is not Local
-        if (item.PricingElement && Array.isArray(item.PricingElement)) {
-          item.PricingElement.forEach(pricing => {
-            // Update currency if type is not Local
-            if (type !== 'Local') {
-              const currency = type.toUpperCase();
-              pricing.ConditionCurrency = currency;
-            }
-            
-            // Update ZSFN ConditionRateValue with random net amount
-            if (pricing.ConditionType === 'ZSFN') {
-              randomAmount = generateRandomNetAmount();
-              pricing.ConditionRateValue = randomAmount;
+        item.SalesOrder = soNumber;
+        if (Array.isArray(item.PricingElement)) {
+          item.PricingElement.forEach(pe => {
+            pe.SalesOrder = soNumber;
+          });
+        }
+        if (Array.isArray(item.ItemText)) {
+          item.ItemText.forEach(txt => {
+            txt.SalesOrder = soNumber;
+          });
+        }
+        if (Array.isArray(item.to_billingplan)) {
+          item.to_billingplan.forEach(bp => {
+            bp.SalesOrder = soNumber;
+            if (Array.isArray(bp.to_billingplanitem)) {
+              bp.to_billingplanitem.forEach(bpi => {
+                bpi.SalesOrder = soNumber;
+              });
             }
           });
         }
       });
+    }
+  });
+  return jsonData;
+}
+
+async function postToCPI(payload) {
+  if (!endpoint.url) throw new Error('No CPI endpoint URL configured.');
+  const { url, username, password } = endpoint;
+  const res = await axios.post(url, payload, {
+    headers: { 'Content-Type': 'application/json', env: 'Test', mode: 'debug' },
+    auth: { username, password },
+    timeout: 120000,
+  });
+  // Try to extract companyCode and type from payload if possible
+  let companyCode = '';
+  let type = '';
+  if (payload && payload.SalesOrder && Array.isArray(payload.SalesOrder) && payload.SalesOrder.length > 0) {
+    companyCode = payload.SalesOrder[0].CompanyCode || '';
+    type = payload.SalesOrder[0].TransactionCurrency || '';
+  }
+  console.log(`${companyCode} ${type} CPI Response:`, res.data);
+  return res.data;
+}
+
+async function processCompany(companyCode, cases) {
+  const prepaymentBase = loadBaseJson(companyCode);
+  const companyOutput = { Records: [] };
+
+  for (const caseStr of cases) {
+    const { relation } = parseCaseType(caseStr);
+    const count = timesForCase(relation);
+
+    const perCaseRecords = [];
+
+    // Initial send to create or reference SO
+    const unique0 = generateUniqueId();
+    const sfid0 = `TEST${companyCode}${unique0}`;
+    const amount0 = generateRandomNetAmount();
+    const payload0 = applyPrepaymentEdits(clone(prepaymentBase), {
+      companyCode,
+      currency: PREPAYMENT_CURRENCY,
+      uniqueString: unique0,
+      sfid: sfid0,
+      amount: amount0,
     });
-    
+    let soNumberForCase = null;
     try {
-      // Send request to IF_013 endpoint
-      const { url, username, password } = config.endpoint.IF_013;
-      const response = await axios.post(url, jsonData, {
-        headers: { 'Content-Type': 'application/json', env: 'Cust', mode: 'debug' },
-        auth: { username, password }
+      const data0 = await postToCPI(payload0);
+      soNumberForCase = data0 && data0.SO_Number__c ? data0.SO_Number__c : null;
+      const billingNumber0 = extractBillingNumber(data0 && data0.Status_Description__c);
+      perCaseRecords.push({
+        SoNumber: soNumberForCase,
+        BillingNumber: billingNumber0,
+        PrepaymentRequestnumber: unique0,
+        Amount: amount0,
       });
-      
-      console.log(`${companyCode} ${type} ${i + 1} Response:`, response.data);
+    } catch (err) {
+      perCaseRecords.push({
+        SoNumber: null,
+        BillingNumber: null,
+        PrepaymentRequestnumber: unique0,
+        Amount: amount0,
+      });
+    }
 
-      // Add to SO tracking
-      addToSOTracking(companyCode, type, i + 1, response.data, uniqueString, randomAmount);
-      
-      // Store the result
-      results.push({
-        iteration: i + 1,
-        uniqueString: uniqueString,
-        SFID: SFID,
-        response: response.data,
-        finalJson: jsonData
-      });
-      
-      // Create company and type folders if they don't exist
-      const companyFolderPath = path.join(__dirname, companyCode);
-      const typeFolderPath = path.join(companyFolderPath, type.toLowerCase());
-      if (!fs.existsSync(typeFolderPath)) {
-        fs.mkdirSync(typeFolderPath, { recursive: true });
+    // For ManyToOne, send more times referencing the same SO
+    if (count > 1 && soNumberForCase) {
+      for (let i = 1; i < count; i++) {
+        const unique = generateUniqueId();
+        const sfid = `TEST${companyCode}${unique}`;
+        const amount = generateRandomNetAmount();
+        const payloadN = applyPrepaymentEdits(
+          setSalesOrderInPayload(clone(prepaymentBase), soNumberForCase),
+          {
+            companyCode,
+            currency: PREPAYMENT_CURRENCY,
+            uniqueString: unique,
+            sfid,
+            amount,
+          }
+        );
+        try {
+          const dataN = await postToCPI(payloadN);
+          const billingNumber = extractBillingNumber(dataN && dataN.Status_Description__c);
+          perCaseRecords.push({
+            SoNumber: soNumberForCase,
+            BillingNumber: billingNumber,
+            PrepaymentRequestnumber: unique,
+            Amount: amount,
+          });
+        } catch (err) {
+          perCaseRecords.push({
+            SoNumber: soNumberForCase,
+            BillingNumber: null,
+            PrepaymentRequestnumber: unique,
+            Amount: amount,
+          });
+        }
       }
-      
-      // Save each iteration to the appropriate folder
-      const tempFilePath = path.join(typeFolderPath, `${i + 1}.json`);
-      fs.writeFileSync(tempFilePath, JSON.stringify(jsonData, null, 2), 'utf8');
-      
-    } catch (error) {
-      results.push({
-        iteration: i + 1,
-        uniqueString: uniqueString,
-        SFID: SFID,
-        error: error.message
-      });
     }
+
+    companyOutput.Records.push({ case: caseStr, record: perCaseRecords });
   }
-  
-  return results;
+
+  return companyOutput;
 }
 
-// Process all companies for a specific type
-async function processCompaniesForType(type) {
-  try {
-    const allResults = {};
-    
-    // Iterate through each company
-    for (const companyCode in config.Company) {
-      allResults[companyCode] = {};
-      
-      // Step 1: Create initial prepayment for the specified type
-      const { responseData, finalJson } = await createPrepayment(companyCode, type);
-      allResults[companyCode].initial = { responseData, finalJson };
-      
-      // Step 2: Process multiple prepayments for the specified type
-      const results = await processMultiplePrepayments(companyCode, finalJson, type);
-      allResults[companyCode].multiple = results;
-    }
-    
-    return allResults;
-    
-  } catch (error) {
-    console.error('Process execution error:', error.message);
-    throw error;
+async function main() {
+  if (!companies.length) {
+    console.error('No companies configured in config.yaml (Company). Nothing to do.');
+    return;
   }
+  if (!caseList.length) {
+    console.error('No cases found in case_records.json. Nothing to do.');
+    return;
+  }
+
+  const finalOutput = {};
+  for (const company of companies) {
+    console.log(`Processing company ${company} with ${caseList.length} cases (currency=${PREPAYMENT_CURRENCY})...`);
+    finalOutput[company] = await processCompany(company, caseList);
+  }
+  fs.writeFileSync(PREPAYMENT_DATA_PATH, JSON.stringify(finalOutput, null, 2), 'utf8');
+  console.log(`Wrote ${PREPAYMENT_DATA_PATH}`);
 }
 
-const type = config.type;
-
-processCompaniesForType(type)
+// Run if executed directly
+if (require.main === module) {
+  main().catch(err => {
+    console.error('Fatal error:', err.message);
+    process.exitCode = 1;
+  });
+}

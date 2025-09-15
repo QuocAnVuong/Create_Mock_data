@@ -1,0 +1,19 @@
+{
+  "record": [
+    {
+      "case": "OneToOne-Happy-OverDelivery"
+    },
+    {
+      "case": "ManyToOne-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToOne-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-UnderDelivery"
+    },
+    {
+      "case": "ManyToOne-Happy-UnderDelivery"
+    }
+  ]
+}

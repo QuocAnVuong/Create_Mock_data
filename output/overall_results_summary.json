@@ -1,0 +1,120 @@
+{
+  "timestamp": "2025-09-15T02:56:56.662Z",
+  "totalCompaniesProcessed": 1,
+  "totalJsonsCreated": 6,
+  "totalRequestsSent": 6,
+  "totalSuccessfulRequests": 6,
+  "totalFailedRequests": 0,
+  "companiesResults": {
+    "SAC1": [
+      {
+        "caseName": "OneToOne-Happy-OverDelivery",
+        "scenario": "OneToOne",
+        "caseType": "OverDelivery-Happy",
+        "originalData": {
+          "case": "OneToOne-Happy-OverDelivery",
+          "record": [
+            {
+              "SoNumber": "1SA0002434",
+              "BillingNumber": "1SA5000567",
+              "PrepaymentRequestnumber": "QSwU83vM",
+              "Amount": 634
+            }
+          ]
+        },
+        "generatedJsonCount": 1,
+        "transactionOrderNumbers": "1SA0002439"
+      },
+      {
+        "caseName": "ManyToOne-DiffPrepayment-OverDelivery",
+        "scenario": "ManyToOne",
+        "caseType": "OverDelivery-DiffPrepayment",
+        "originalData": {
+          "case": "ManyToOne-DiffPrepayment-OverDelivery",
+          "record": [
+            {
+              "SoNumber": "1SA0002435",
+              "BillingNumber": "1SA5000568",
+              "PrepaymentRequestnumber": "cJG6qIR4",
+              "Amount": 571
+            },
+            {
+              "SoNumber": "1SA0002435",
+              "BillingNumber": "1SA5000569",
+              "PrepaymentRequestnumber": "tlgRSxaz",
+              "Amount": 2019
+            },
+            {
+              "SoNumber": "1SA0002435",
+              "BillingNumber": "1SA5000570",
+              "PrepaymentRequestnumber": "oB85jnfl",
+              "Amount": 2329
+            }
+          ]
+        },
+        "generatedJsonCount": 1,
+        "transactionOrderNumbers": "1SA0002440"
+      },
+      {
+        "caseName": "OneToOne-DiffPrepayment-UnderDelivery",
+        "scenario": "OneToOne",
+        "caseType": "UnderDelivery-DiffPrepayment",
+        "originalData": {
+          "case": "OneToOne-DiffPrepayment-UnderDelivery",
+          "record": [
+            {
+              "SoNumber": "1SA0002436",
+              "BillingNumber": "1SA5000571",
+              "PrepaymentRequestnumber": "6qd5RxzZ",
+              "Amount": 1116
+            }
+          ]
+        },
+        "generatedJsonCount": 1,
+        "transactionOrderNumbers": "1SA0002441"
+      },
+      {
+        "caseName": "OneToMany-Happy-UnderDelivery",
+        "scenario": "OneToMany",
+        "caseType": "UnderDelivery-Happy",
+        "originalData": {
+          "case": "OneToMany-Happy-UnderDelivery",
+          "record": [
+            {
+              "SoNumber": "1SA0002437",
+              "BillingNumber": "1SA5000572",
+              "PrepaymentRequestnumber": "9LpzYePU",
+              "Amount": 1847
+            }
+          ]
+        },
+        "generatedJsonCount": 2,
+        "transactionOrderNumbers": "1SA0002442, 1SA0002443"
+      },
+      {
+        "caseName": "ManyToOne-Happy-UnderDelivery",
+        "scenario": "ManyToOne",
+        "caseType": "UnderDelivery-Happy",
+        "originalData": {
+          "case": "ManyToOne-Happy-UnderDelivery",
+          "record": [
+            {
+              "SoNumber": "1SA0002438",
+              "BillingNumber": "1SA5000573",
+              "PrepaymentRequestnumber": "9uSQ7TLR",
+              "Amount": 771
+            },
+            {
+              "SoNumber": "1SA0002438",
+              "BillingNumber": "1SA5000574",
+              "PrepaymentRequestnumber": "7Xra5Rwu",
+              "Amount": 2398
+            }
+          ]
+        },
+        "generatedJsonCount": 1,
+        "transactionOrderNumbers": "1SA0002444"
+      }
+    ]
+  }
+}

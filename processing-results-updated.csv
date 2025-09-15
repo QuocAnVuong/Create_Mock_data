@@ -1,0 +1,6 @@
+Company Code,Data Source,SO Number,Record Index,Billing Number,Original Prepayment Request Number,Amount,Assigned Case,Assigned Scenario,OneToMany Number,ZFSN,Generated Prepayment Request Number,Processed,TransactionOrderNumbers
+SAC1,JSON,1SA0002434,1,1SA5000567,QSwU83vM,634,OverDelivery-Happy,OneToOne,,1359,QSwU83vM,true,1SA0002439
+SAC1,JSON,"1SA0002435, 1SA0002435, 1SA0002435","1, 2, 3","1SA5000568, 1SA5000569, 1SA5000570","cJG6qIR4, tlgRSxaz, oB85jnfl","571, 2019, 2329",OverDelivery-DiffPrepayment,ManyToOne,3,5548,G04uwIZjG,true,1SA0002440
+SAC1,JSON,1SA0002436,1,1SA5000571,6qd5RxzZ,1116,UnderDelivery-DiffPrepayment,OneToOne,,1116,xprjsXmHJ,true,1SA0002441
+SAC1,JSON,1SA0002437,1,1SA5000572,9LpzYePU,1847,UnderDelivery-Happy,OneToMany,2,"918, 929","9LpzYePU, 9LpzYePU",true,"1SA0002442, 1SA0002443"
+SAC1,JSON,"1SA0002438, 1SA0002438","1, 2","1SA5000573, 1SA5000574","9uSQ7TLR, 7Xra5Rwu","771, 2398",UnderDelivery-Happy,ManyToOne,2,3169,9uSQ7TLR,true,1SA0002444

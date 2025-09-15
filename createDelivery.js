@@ -17,7 +17,7 @@ try {
 
 // Unique string management
 let usedUniqueStrings = new Set();
-const uniqueStringsFile = path.join(__dirname, 'used_unique_strings.json');
+const uniqueStringsFile = path.join(__dirname, 'usedUniqueStrings.json');
 
 // Load unique strings from file
 function loadUniqueStrings() {
@@ -147,7 +147,7 @@ function generateZFSN(assignedCase, assignedScenario, amounts, oneToManyNumber) 
 
 // Function to read JSON template based on company code
 function loadTemplate(companyCode) {
-    const templatePath = path.join(__dirname, 'Sample', `${companyCode}.json`);
+    const templatePath = path.join(__dirname, 'Sample/Delivery', `${companyCode}.json`);
     if (!fs.existsSync(templatePath)) {
         throw new Error(`Template file not found for company code: ${companyCode}`);
     }
@@ -202,8 +202,8 @@ async function processCase(caseData, caseName, template, companyCode) {
     // Parse case name to determine delivery type, case type, and scenario
     const caseParts = caseName.split('-');
     const deliveryType = caseParts[0]; // ManyToOne, OneToOne, OneToMany
-    const caseType = caseParts[1]; // OverDelivery, UnderDelivery
-    const detailType = caseParts[2]; // Happy, NoPrepayment, DiffPrepayment (for Over/Under delivery)
+    const detailType = caseParts[1]; // OverDelivery, UnderDelivery
+    const caseType = caseParts[2]; // Happy, NoPrepayment, DiffPrepayment (for Over/Under delivery)
     
     // Determine scenario from case name
     let assignedScenario = 'OneToOne'; // default
@@ -259,19 +259,56 @@ async function processCase(caseData, caseName, template, companyCode) {
     
     // Determine prepayment request numbers to use based on case type
     function getPrepaymentRequestNumbers() {
-        if (detailType === 'Happy' || caseType === 'Happy') {
-            // Use original prepayment numbers
-            return uniquePrepaymentNumbers;
-        } else if (detailType === 'NoPrepayment') {
-            // Use empty strings
-            return uniquePrepaymentNumbers.map(() => '');
-        } else if (detailType === 'DiffPrepayment') {
-            // Generate new unique IDs
-            return uniquePrepaymentNumbers.map(() => generateUniqueId(9));
+        // console.log("detailType:", detailType, "caseType:", caseType, "deliveryType:", deliveryType);
+        
+        // Determine the scenario type from deliveryType
+        if (deliveryType === 'OneToOne') {
+            // OneToOne: Always create exactly 1 prepayment number
+            if (detailType === 'Happy' || caseType === 'Happy') {
+                // Use the first original prepayment number
+                return [uniquePrepaymentNumbers[0]];
+            } else if (detailType === 'NoPrepayment') {
+                // Use empty string
+                return [''];
+            } else if (detailType === 'DiffPrepayment') {
+                // Generate 1 new unique ID
+                return [generateUniqueId(9)];
+            }
+            
+        } else if (deliveryType === 'OneToMany') {
+            // OneToMany: Create array of min 2 to max MaxNumberOneToMany
+            const maxNumber = config.MaxNumberOneToMany || 3; // Default to 3 if not in config
+            const arraySize = Math.max(2, Math.min(maxNumber, oneToManyNumber)); // Ensure min 2, max MaxNumberOneToMany
+            
+            if (detailType === 'Happy' || caseType === 'Happy') {
+                // Create array filled with the same original prepayment number
+                return new Array(arraySize).fill(uniquePrepaymentNumbers[0]);
+            } else if (detailType === 'NoPrepayment') {
+                // Create array filled with empty strings
+                return new Array(arraySize).fill('');
+            } else if (detailType === 'DiffPrepayment') {
+                // Generate the same amount of different prepayment numbers
+                return Array.from({ length: arraySize }, () => generateUniqueId(9));
+            }
+            
+        } else if (deliveryType === 'ManyToOne') {
+            // ManyToOne: Always use exactly 1 prepayment number
+            if (detailType === 'Happy' || caseType === 'Happy') {
+                // Use the first original prepayment number
+                return [uniquePrepaymentNumbers[0]];
+            } else if (detailType === 'NoPrepayment') {
+                // Use empty string
+                return [''];
+            } else if (detailType === 'DiffPrepayment') {
+                // Generate 1 new unique ID
+                return [generateUniqueId(9)];
+            }
         }
         
+        // Fallback to original behavior
         return uniquePrepaymentNumbers;
     }
+
     
     const prepaymentRequestNumbers = getPrepaymentRequestNumbers();
     
@@ -320,7 +357,8 @@ async function processCase(caseData, caseName, template, companyCode) {
         'Amount': amounts.join(', '),
         'Assigned Case': fullCaseType,
         'Assigned Scenario': assignedScenario,
-        'OneToMany Number': assignedScenario === 'OneToMany' ? results.length : null,
+        'OneToMany Number': assignedScenario === 'OneToMany' ? results.length : 
+                        assignedScenario === 'ManyToOne' ? uniquePrepaymentNumbers.length : null,
         'ZFSN': zsfnAmounts.join(', '), // Using generated ZSFN amounts
         'Generated Prepayment Request Number': prepaymentRequestNumbers.join(', '),
         'Processed': true,
@@ -373,7 +411,7 @@ async function main() {
         loadUniqueStrings();
         
         // Read and parse JSON file
-        const jsonFilePath = path.join(__dirname, 'prepaymentData.json');
+        const jsonFilePath = path.join(__dirname, 'Prepayment_Data.json');
         const jsonContent = fs.readFileSync(jsonFilePath, 'utf8');
         const inputData = JSON.parse(jsonContent);
         

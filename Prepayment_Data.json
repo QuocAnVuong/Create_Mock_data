@@ -1,0 +1,79 @@
+{
+  "SAC1": {
+    "Records": [
+      {
+        "case": "OneToOne-Happy-OverDelivery",
+        "record": [
+          {
+            "SoNumber": "1SA0002434",
+            "BillingNumber": "1SA5000567",
+            "PrepaymentRequestnumber": "QSwU83vM",
+            "Amount": 634
+          }
+        ]
+      },
+      {
+        "case": "ManyToOne-DiffPrepayment-OverDelivery",
+        "record": [
+          {
+            "SoNumber": "1SA0002435",
+            "BillingNumber": "1SA5000568",
+            "PrepaymentRequestnumber": "cJG6qIR4",
+            "Amount": 571
+          },
+          {
+            "SoNumber": "1SA0002435",
+            "BillingNumber": "1SA5000569",
+            "PrepaymentRequestnumber": "tlgRSxaz",
+            "Amount": 2019
+          },
+          {
+            "SoNumber": "1SA0002435",
+            "BillingNumber": "1SA5000570",
+            "PrepaymentRequestnumber": "oB85jnfl",
+            "Amount": 2329
+          }
+        ]
+      },
+      {
+        "case": "OneToOne-DiffPrepayment-UnderDelivery",
+        "record": [
+          {
+            "SoNumber": "1SA0002436",
+            "BillingNumber": "1SA5000571",
+            "PrepaymentRequestnumber": "6qd5RxzZ",
+            "Amount": 1116
+          }
+        ]
+      },
+      {
+        "case": "OneToMany-Happy-UnderDelivery",
+        "record": [
+          {
+            "SoNumber": "1SA0002437",
+            "BillingNumber": "1SA5000572",
+            "PrepaymentRequestnumber": "9LpzYePU",
+            "Amount": 1847
+          }
+        ]
+      },
+      {
+        "case": "ManyToOne-Happy-UnderDelivery",
+        "record": [
+          {
+            "SoNumber": "1SA0002438",
+            "BillingNumber": "1SA5000573",
+            "PrepaymentRequestnumber": "9uSQ7TLR",
+            "Amount": 771
+          },
+          {
+            "SoNumber": "1SA0002438",
+            "BillingNumber": "1SA5000574",
+            "PrepaymentRequestnumber": "7Xra5Rwu",
+            "Amount": 2398
+          }
+        ]
+      }
+    ]
+  }
+}
