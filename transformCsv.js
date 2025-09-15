@@ -5,7 +5,7 @@ const XLSX = require('xlsx');
 
 // Load configuration from config.yaml
 const config = yaml.parse(fs.readFileSync('config.yaml', 'utf8'));
-const configType = config.type;
+const configType = config.prepaymentCurrency;
 
 // Read the processing-results-updated.csv file
 const csvData = fs.readFileSync('processing-results-updated.csv', 'utf8');

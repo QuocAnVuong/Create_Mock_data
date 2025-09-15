@@ -40,4 +40,10 @@ function generateCaseRecordsFromConfig() {
   console.log('case_records.json generated.');
 }
 
-generateCaseRecordsFromConfig();
+// Run if executed directly
+if (require.main === module) {
+  generateCaseRecordsFromConfig();
+}
+
+// Export the function for use in other modules
+module.exports = { generateCaseRecordsFromConfig };

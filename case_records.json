@@ -4,16 +4,301 @@
       "case": "OneToOne-Happy-OverDelivery"
     },
     {
-      "case": "ManyToOne-DiffPrepayment-OverDelivery"
+      "case": "OneToMany-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToOne-Happy-OverDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-OverDelivery"
     },
     {
       "case": "OneToOne-DiffPrepayment-UnderDelivery"
     },
     {
+      "case": "OneToMany-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-Happy-UnderDelivery"
+    },
+    {
       "case": "OneToMany-Happy-UnderDelivery"
     },
     {
-      "case": "ManyToOne-Happy-UnderDelivery"
+      "case": "OneToOne-Happy-OverDelivery"
+    },
+    {
+      "case": "OneToOne-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToOne-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToOne-Happy-OverDelivery"
+    },
+    {
+      "case": "OneToOne-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-Happy-OverDelivery"
+    },
+    {
+      "case": "OneToOne-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-OverDelivery"
+    },
+    {
+      "case": "OneToOne-Happy-OverDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-OverDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToOne-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToOne-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToOne-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-Happy-OverDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-Happy-OverDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-Happy-OverDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-OverDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-OverDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-OverDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-OverDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-OverDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-OverDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-OverDelivery"
+    },
+    {
+      "case": "OneToOne-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToOne-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-Happy-OverDelivery"
+    },
+    {
+      "case": "OneToMany-Happy-OverDelivery"
+    },
+    {
+      "case": "OneToOne-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToOne-Happy-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-UnderDelivery"
+    },
+    {
+      "case": "OneToMany-DiffPrepayment-OverDelivery"
+    },
+    {
+      "case": "OneToOne-Happy-OverDelivery"
     }
   ]
 }

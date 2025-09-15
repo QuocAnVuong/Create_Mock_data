@@ -304,3 +304,6 @@ if (require.main === module) {
     process.exitCode = 1;
   });
 }
+
+// Export the main function for use in other modules
+module.exports = { main };

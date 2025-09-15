@@ -161,6 +161,7 @@ function deepClone(obj) {
 
 // Function to create JSON body for a single record
 function createJSONBody(template, prepaymentRequestNumber, zsfnValue, testId) {
+    const type = config.DeliveryCurrency || 'Local'; // Default to 'Local' if not specified
     const jsonBody = deepClone(template);
     const salesOrderItem = jsonBody.SalesOrder[0].SalesOrderItem[0];
     
@@ -179,6 +180,21 @@ function createJSONBody(template, prepaymentRequestNumber, zsfnValue, testId) {
     const zsfnElement = salesOrderItem.PricingElement.find(pe => pe.ConditionType === 'ZSFN');
     if (zsfnElement && zsfnValue !== null && zsfnValue !== undefined) {
         zsfnElement.ConditionRateValue = parseFloat(zsfnValue) || 0;
+    }
+
+    if (type !== 'Local') {
+        const currency = type.toUpperCase();
+        console.log('Setting currency to:', currency);
+        
+        // Update TransactionCurrency at the top level
+        jsonBody.SalesOrder[0].TransactionCurrency = currency;
+        
+        // Update PricingElement currencies
+        if (salesOrderItem.PricingElement && Array.isArray(salesOrderItem.PricingElement)) {
+            salesOrderItem.PricingElement.forEach(pricing => {
+                pricing.ConditionCurrency = currency;
+            });
+        }   
     }
     
     return jsonBody;
@@ -262,7 +278,7 @@ async function processCase(caseData, caseName, template, companyCode) {
         // console.log("detailType:", detailType, "caseType:", caseType, "deliveryType:", deliveryType);
         
         // Determine the scenario type from deliveryType
-        if (deliveryType === 'OneToOne') {
+        if (assignedScenario === 'OneToOne') {
             // OneToOne: Always create exactly 1 prepayment number
             if (detailType === 'Happy' || caseType === 'Happy') {
                 // Use the first original prepayment number
@@ -275,7 +291,7 @@ async function processCase(caseData, caseName, template, companyCode) {
                 return [generateUniqueId(9)];
             }
             
-        } else if (deliveryType === 'OneToMany') {
+        } else if (assignedScenario === 'OneToMany') {
             // OneToMany: Create array of min 2 to max MaxNumberOneToMany
             const maxNumber = config.MaxNumberOneToMany || 3; // Default to 3 if not in config
             const arraySize = Math.max(2, Math.min(maxNumber, oneToManyNumber)); // Ensure min 2, max MaxNumberOneToMany
@@ -291,7 +307,7 @@ async function processCase(caseData, caseName, template, companyCode) {
                 return Array.from({ length: arraySize }, () => generateUniqueId(9));
             }
             
-        } else if (deliveryType === 'ManyToOne') {
+        } else if (assignedScenario === 'ManyToOne') {
             // ManyToOne: Always use exactly 1 prepayment number
             if (detailType === 'Happy' || caseType === 'Happy') {
                 // Use the first original prepayment number
