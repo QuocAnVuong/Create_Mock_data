@@ -15,7 +15,7 @@ async function main() {
     try {
         // Step 1: Generate case records from config
         console.log('📋 Step 1: Generating case records from config...');
-        generateCaseRecordsFromConfig();
+        await generateCaseRecordsFromConfig();
         console.log('✅ Case records generated successfully\n');
         
         // Step 2: Create prepayment data

@@ -180,7 +180,7 @@ async function postToCPI(payload) {
   if (!endpoint.url) throw new Error('No CPI endpoint URL configured.');
   const { url, username, password } = endpoint;
   const res = await axios.post(url, payload, {
-    headers: { 'Content-Type': 'application/json', env: 'Test', mode: 'debug' },
+    headers: { 'Content-Type': 'application/json', env: 'Cust', mode: 'debug' },
     auth: { username, password },
     timeout: 120000,
   });
