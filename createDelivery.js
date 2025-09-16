@@ -42,7 +42,7 @@ function saveUniqueStrings() {
 }
 
 // Generate unique ID function
-function generateUniqueId(length = 9) {
+function generateUniqueId(length = 5) {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
     
@@ -56,7 +56,7 @@ function generateUniqueId(length = 9) {
     
     usedUniqueStrings.add(result);
     saveUniqueStrings();
-    return result;
+    return 'Test' + result;
 }
 
 // Helper function to generate random number between min and max (inclusive)

@@ -58,7 +58,7 @@ function generateRandomNetAmount() {
   return Math.floor(Math.random() * (max - min + 1)) + min; // inclusive
 }
 
-function generateUniqueId(length = 8) {
+function generateUniqueId(length = 4) {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
   let result = '';
   let attempts = 0;
@@ -73,7 +73,7 @@ function generateUniqueId(length = 8) {
   } while (usedUniqueStrings.has(result));
   usedUniqueStrings.add(result);
   saveUsedUniqueStrings();
-  return result;
+  return 'Test' + result;
 }
 
 function parseCaseType(caseString) {
