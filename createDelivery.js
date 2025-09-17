@@ -288,7 +288,7 @@ async function processCase(caseData, caseName, template, companyCode) {
                 return [''];
             } else if (detailType === 'DiffPrepayment') {
                 // Generate 1 new unique ID
-                return [generateUniqueId(9)];
+                return [generateUniqueId()];
             }
             
         } else if (assignedScenario === 'OneToMany') {
@@ -304,7 +304,7 @@ async function processCase(caseData, caseName, template, companyCode) {
                 return new Array(arraySize).fill('');
             } else if (detailType === 'DiffPrepayment') {
                 // Generate the same amount of different prepayment numbers
-                return Array.from({ length: arraySize }, () => generateUniqueId(9));
+                return Array.from({ length: arraySize }, () => generateUniqueId());
             }
             
         } else if (assignedScenario === 'ManyToOne') {
@@ -317,7 +317,7 @@ async function processCase(caseData, caseName, template, companyCode) {
                 return [''];
             } else if (detailType === 'DiffPrepayment') {
                 // Generate 1 new unique ID
-                return [generateUniqueId(9)];
+                return [generateUniqueId()];
             }
         }
         

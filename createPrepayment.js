@@ -29,9 +29,9 @@ const MAX_MANY_TO_ONE = Number.isFinite(config.MaxNumberOneToMany) ? Math.max(2,
 const NET_MIN = Number.isFinite(config.NetAmount?.Min) ? config.NetAmount.Min : 500;
 const NET_MAX = Number.isFinite(config.NetAmount?.Max) ? config.NetAmount.Max : 2500;
 
-// Load case records
-const caseRecordsRaw = JSON.parse(fs.readFileSync(CASE_RECORDS_PATH, 'utf8'));
-const caseList = Array.isArray(caseRecordsRaw.record) ? caseRecordsRaw.record.map(r => r.case) : [];
+// // Load case records
+// const caseRecordsRaw = JSON.parse(fs.readFileSync(CASE_RECORDS_PATH, 'utf8'));
+// const caseList = Array.isArray(caseRecordsRaw.record) ? caseRecordsRaw.record.map(r => r.case) : [];
 
 // Load used unique strings
 let usedUniqueStrings = new Set();
@@ -180,7 +180,7 @@ async function postToCPI(payload) {
   if (!endpoint.url) throw new Error('No CPI endpoint URL configured.');
   const { url, username, password } = endpoint;
   const res = await axios.post(url, payload, {
-    headers: { 'Content-Type': 'application/json', env: 'Cust', mode: 'debug' },
+    headers: { 'Content-Type': 'application/json', env: 'Test', mode: 'debug' },
     auth: { username, password },
     timeout: 120000,
   });
@@ -279,6 +279,20 @@ async function processCompany(companyCode, cases) {
 }
 
 async function main() {
+  let caseRecordsRaw;
+  let caseList = [];
+  
+  try {
+    if (!fs.existsSync(CASE_RECORDS_PATH)) {
+      throw new Error(`Case records file not found: ${CASE_RECORDS_PATH}`);
+    }
+    caseRecordsRaw = JSON.parse(fs.readFileSync(CASE_RECORDS_PATH, 'utf8'));
+    caseList = Array.isArray(caseRecordsRaw.record) ? caseRecordsRaw.record.map(r => r.case) : [];
+  } catch (error) {
+    console.error('Error loading case records:', error.message);
+    return;
+  }
+
   if (!companies.length) {
     console.error('No companies configured in config.yaml (Company). Nothing to do.');
     return;
