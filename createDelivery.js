@@ -240,7 +240,8 @@ async function processCase(caseData, caseName, template, companyCode) {
     // Determine number of deliveries for OneToMany
     let oneToManyNumber = 1;
     if (assignedScenario === 'OneToMany') {
-        oneToManyNumber = amounts.length > 1 ? amounts.length : 2; // Default to 2 if only one amount
+        const maxNumber = config.MaxNumberOneToMany || 5; // Default to 5 if not in config
+        oneToManyNumber = randomBetween(2, maxNumber); // Random between 2 and MaxNumberOneToMany
     }
     
     // Generate ZSFN amounts based on case and scenario
@@ -293,8 +294,9 @@ async function processCase(caseData, caseName, template, companyCode) {
             
         } else if (assignedScenario === 'OneToMany') {
             // OneToMany: Create array of min 2 to max MaxNumberOneToMany
-            const maxNumber = config.MaxNumberOneToMany || 3; // Default to 3 if not in config
-            const arraySize = Math.max(2, Math.min(maxNumber, oneToManyNumber)); // Ensure min 2, max MaxNumberOneToMany
+            // const maxNumber = config.MaxNumberOneToMany || 3; // Default to 3 if not in config
+            // const arraySize = randomBetween(2, Math.min(maxNumber, oneToManyNumber)); // Random between 2 and oneToManyNumber
+            const arraySize = oneToManyNumber;
             
             if (detailType === 'Happy' || caseType === 'Happy') {
                 // Create array filled with the same original prepayment number
@@ -339,13 +341,13 @@ async function processCase(caseData, caseName, template, companyCode) {
         
     } else if (assignedScenario === 'OneToMany') {
         // OneToMany: Single prepayment number, create multiple requests
-        const basePrepaymentNumber = prepaymentRequestNumbers[0];
         
         for (let i = 0; i < oneToManyNumber; i++) {
-            const testId = `Delvr_${basePrepaymentNumber || 'OneToMany'}_${i + 1}`;
+            const prepaymentNumber = prepaymentRequestNumbers[i];
+            const testId = `Delvr_${prepaymentNumber || 'OneToMany'}_${i + 1}`;
             const zsfn = zsfnAmounts[i]; // Use corresponding generated ZSFN amount
             
-            await createAndSendRequest(basePrepaymentNumber, zsfn, testId);
+            await createAndSendRequest(prepaymentNumber, zsfn, testId);
         }
         
     } else {

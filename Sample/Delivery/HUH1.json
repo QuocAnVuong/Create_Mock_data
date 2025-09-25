@@ -3,7 +3,7 @@
         {
             "YY1_SFPROJECTID_H": "LK00301631",
             "YY1_SALESFORCEID_H": "500VD00000JhIoMYAV",
-            "YY1_SALESCHANNEL_H": "Traditional (Local Team)",
+            "YY1_SALESCHANNEL_H": " Sales Local ",
             "YY1_REPENTITY_H": "",
             "YY1_REPCOUNTRY_H": "LK",
             "YY1_PERFORMANCE_H": "Client Performance Driven (ROI)",
@@ -11,45 +11,44 @@
             "YY1_IOTYPE_H": "",
             "YY1_CLIENT_POID_H": "",
             "YY1_BUSUNITGRP_H": "TikTok",
-            "YY1_BUSINESSUNIT_H": "TIK",
+            "YY1_BUSINESSUNIT_H": "ABM",
             "YY1_BATCHID_H": "a0qUj000002gWQXIB4",
             "YY1_AGENCYID_H": "",
-            "YY1_ADVERTISERID_H": "BCACOGLZS3",
-            "TransactionCurrency": "USD",
-            "SoldToParty": "BCACOGLZS3",
-            "SalesOrganization": "AEC1",
+            "YY1_ADVERTISERID_H": "10001528",
+            "TransactionCurrency": "EUR",
+            "SoldToParty": "10001528",
+            "SalesOrganization": "HUH1",
             "SalesOrderType": "TA",
             "SalesOrderItemsSet": [
-                "AEC1_SIT_8"
+                "HUH1_SIT_05"
             ],
             "SalesOrderItem": [
                 {
-                    "YY1_SFDCLINEID_I": "AEC1_SIT_8",
-                    "YY1_SALESFORCEID_I": "AEC1_SIT_8",
+                    "YY1_SFDCLINEID_I": "HUH1_SIT_05",
+                    "YY1_SALESFORCEID_I": "HUH1_SIT_05",
                     "YY1_PURENTITY_I": "",
                     "YY1_POID_I": "",
                     "YY1_LINEID_I": "",
                     "YY1_DELIVERYMONTH_I": "",
                     "YY1_BUSUNITGRP_I": "",
-                    "YY1_BUSINESSUNIT_I": "TIK",
+                    "YY1_BUSINESSUNIT_I": "ABM",
                     "YY1_BATCHID_I": "a0qUj000002gWQXIA2",
                     "SalesOrderItem": "",
-                    "Isprepayment": "Yes",
-                    "PrepaymentRequestnumber": "NOPAYR06",
+                    "PrepaymentRequestnumber": "HUH230901",
                     "CreditMemoRequestItem": "",
                     "SalesOrder": "",
                     "RequestedQuantityUnit": "Auction",
                     "RequestedQuantity": 1,
                     "ProfitCenter": "TikTok",
-                    "ProductionPlant": "AEC1",
+                    "ProductionPlant": "HUH1",
                     "PricingElement": [
                         {
                             "SalesOrderItem": "",
                             "CreditMemoRequestItem": "",
                             "SalesOrder": "",
                             "ConditionType": "ZSFN",
-                            "ConditionRateValue": 2222,
-                            "ConditionCurrency": "USD"
+                            "ConditionRateValue": 1000,
+                            "ConditionCurrency": "EUR"
                         }
                     ],
                     "Material": "Prepayment",
@@ -143,32 +142,12 @@
                             "Language": "EN"
                         }
                     ],
-                    "ItemBillingBlockReason": "",
-                    "to_billingplan": [
-                        {
-                            "SalesOrder": "",
-                            "SalesOrderItem": "",
-                            "BillingPlan": "",
-                            "BillingPlanIsInHeader": false,
-                            "to_billingplanitem": [
-                                {
-                                    "SalesOrder": "",
-                                    "SalesOrderItem": "",
-                                    "BillingPlan": "",
-                                    "BillingPlanItem": "",
-                                    "BillingPlanDateCategory": "04",
-                                    "BillingPlanBillingDate": "2025-09-01",
-                                    "BillingPlanAmount": "2222.0",
-                                    "BillingBlockReason": ""
-                                }
-                            ]
-                        }
-                    ]
+                    "ItemBillingBlockReason": ""
                 }
             ],
             "SalesOrder": "",
             "CreditMemoRequest": "",
-            "PurchaseOrderByCustomer": "AEC1STPOH115",
+            "PurchaseOrderByCustomer": "HUH1STPOH115",
             "OrganizationDivision": "10",
             "DistributionChannel": "20"
         }

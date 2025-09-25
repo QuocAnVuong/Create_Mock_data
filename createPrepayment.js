@@ -109,7 +109,7 @@ function applyPrepaymentEdits(jsonData, { companyCode, currency, uniqueString, s
   jsonData.SalesOrder.forEach(order => {
     // Ensure set fields
     order.SalesOrderItemsSet = [sfid];
-    if (currency) order.TransactionCurrency = currency;
+    if (currency && currency != "LOCAL") order.TransactionCurrency = currency;
 
     if (Array.isArray(order.SalesOrderItem)) {
       order.SalesOrderItem.forEach(item => {
@@ -120,7 +120,7 @@ function applyPrepaymentEdits(jsonData, { companyCode, currency, uniqueString, s
 
         if (Array.isArray(item.PricingElement)) {
           item.PricingElement.forEach(pe => {
-            if (currency) pe.ConditionCurrency = currency;
+            if (currency && currency != "LOCAL") pe.ConditionCurrency = currency;
             if (pe.ConditionType === 'ZSFN') {
               pe.ConditionRateValue = amount;
             }

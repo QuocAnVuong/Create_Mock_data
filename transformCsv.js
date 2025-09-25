@@ -67,7 +67,11 @@ function getCurrency(companyCode) {
             'SAC1': 'SAR',
             'MAC1': 'MAD', 
             'EGC1': 'EGP',
-            'AEC1': 'USD'
+            'AEC1': 'USD',
+            'BGH2': 'EUR',
+            'HUH1': 'EUR',
+            'SKH1': 'EUR',
+            'CZH1': 'EUR'
         };
         return currencyMap[companyCode] || 'USD';
     } else {
@@ -82,9 +86,46 @@ function getSoldToParty(companyCode) {
         'SAC1': 'HS58M1PTWJ',
         'MAC1': '4F32L8O0DG',
         'EGC1': '275554HENP',
-        'AEC1': '4F32L8O0DG'
+        'AEC1': '4F32L8O0DG',
+        'HUH1': '10001528',
+        'SKH1': '10001528',
+        'CZH1': '10001541',
+        'BGH2': '10001536'
     };
     return soldToPartyMap[companyCode] || 'Unknown';
+}
+
+// Function to calculate amount to apply based on scenario
+function calculateAmountToApply(scenario, prepaymentAmount, deliveryAmounts) {
+    const prepayment = parseFloat(prepaymentAmount) || 0;
+    const deliveries = deliveryAmounts.map(amount => parseFloat(amount) || 0);
+    
+    if (scenario === 'OneToOne') {
+        // OneToOne: find min amount between prepayment and delivery
+        return Math.min(prepayment, deliveries[0] || 0).toString();
+    } else if (scenario === 'OneToMany') {
+        // OneToMany: distribute prepayment amount across multiple deliveries
+        const results = [];
+        let remainingPrepayment = prepayment;
+        
+        for (let i = 0; i < deliveries.length; i++) {
+            const deliveryAmount = deliveries[i];
+            const amountToApply = Math.min(remainingPrepayment, deliveryAmount);
+            results.push(amountToApply.toString());
+            remainingPrepayment -= amountToApply;
+            
+            // If no remaining prepayment, set rest to 0
+            if (remainingPrepayment <= 0) {
+                for (let j = i + 1; j < deliveries.length; j++) {
+                    results.push('0');
+                }
+                break;
+            }
+        }
+        return results;
+    }
+    
+    return '0';
 }
 
 // Function to process each row and handle different scenarios
@@ -131,6 +172,9 @@ function processRow(row) {
         const deliveryOrder = transactionOrders[0] || '';
         const recordIndex = recordIndices[0] || row['Record Index'] || '';
         
+        // Calculate amount to apply for OneToOne
+        const amountToApply = calculateAmountToApply('OneToOne', amounts[0], [deliveryAmount]);
+        
         results.push({
             ...baseData,
             'Reference Number (Prepayment SO)': prepaymentReqs[0] || '',
@@ -143,12 +187,15 @@ function processRow(row) {
             'Delivery SO Line Item Number': '10',
             'Delivery SO Amount': deliveryAmount,
             'Delivery SO Currency': getCurrency(row['Company Code']),
-            'Amount to Apply': deliveryAmount
+            'Amount to Apply': amountToApply
         });
     } else if (assignedScenario === 'OneToMany') {
         // OneToMany scenario - multiple rows
         const isHappyScenario = assignedCase.includes('Happy');
         const recordIndex = recordIndices[0] || row['Record Index'] || '';
+        
+        // Calculate amounts to apply for OneToMany (returns array)
+        const amountsToApply = calculateAmountToApply('OneToMany', amounts[0], deliveryAmounts);
         
         for (let i = 0; i < Math.max(generatedPrepaymentReqs.length, deliveryAmounts.length, transactionOrders.length); i++) {
             const deliveryRefNum = generatedPrepaymentReqs[i] || '';
@@ -171,7 +218,7 @@ function processRow(row) {
                 'Delivery SO Line Item Number': '10',
                 'Delivery SO Amount': deliveryAmount,
                 'Delivery SO Currency': getCurrency(row['Company Code']),
-                'Amount to Apply': deliveryAmount
+                'Amount to Apply': amountsToApply[i] || '0'
             });
         }
     } else if (assignedScenario === 'ManyToOne') {
@@ -207,7 +254,7 @@ function processRow(row) {
                 'Delivery SO Line Item Number': '10',
                 'Delivery SO Amount': deliveryAmount,
                 'Delivery SO Currency': getCurrency(row['Company Code']),
-                'Amount to Apply': deliveryAmount,
+                'Amount to Apply': amount,
                 'Number Of Case': numberOfRows.toString()
             });
         }
