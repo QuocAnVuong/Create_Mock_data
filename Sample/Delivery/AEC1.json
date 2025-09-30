@@ -20,12 +20,12 @@
             "SalesOrganization": "AEC1",
             "SalesOrderType": "TA",
             "SalesOrderItemsSet": [
-                "Delvr_AEC1_02"
+                "Delv_TESTANA09"
             ],
             "SalesOrderItem": [
                 {
-                    "YY1_SFDCLINEID_I": "Delvr_AEC1_02",
-                    "YY1_SALESFORCEID_I": "Delvr_AEC1_02",
+                    "YY1_SFDCLINEID_I": "Delv_TESTANA09",
+                    "YY1_SALESFORCEID_I": "Delv_TESTANA09",
                     "YY1_PURENTITY_I": "AEC1",
                     "YY1_POID_I": "7447090504350892033",
                     "YY1_LINEID_I": "LK00301631_TIK_001_001",
@@ -35,7 +35,7 @@
                     "YY1_BATCHID_I": "a0qUj000002gWQXIA2",
                     "SalesOrderItem": "",
                     "Isprepayment": "Yes",
-                    "PrepaymentRequestnumber": "TESTAEC02",
+                    "PrepaymentRequestnumber": "TESTANA09",
                     "CreditMemoRequestItem": "",
                     "SalesOrder": "",
                     "RequestedQuantityUnit": "Auction",
@@ -68,7 +68,7 @@
                             "CreditMemoRequestItem": "",
                             "SalesOrder": "",
                             "ConditionType": "ZSFN",
-                            "ConditionRateValue": 1000,
+                            "ConditionRateValue": 500,
                             "ConditionCurrency": "USD"
                         },
                         {

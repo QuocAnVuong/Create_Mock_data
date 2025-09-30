@@ -20,12 +20,12 @@
       "SalesOrganization": "MAC1",
       "SalesOrderType": "TA",
       "SalesOrderItemsSet": [
-		"testMAC01"
+		"Delv_TESTANM08"
       ],
       "SalesOrderItem": [
 		{
-          "YY1_SFDCLINEID_I": "testMAC01",
-          "YY1_SALESFORCEID_I": "testMAC01",
+          "YY1_SFDCLINEID_I": "Delv_TESTANM08",
+          "YY1_SALESFORCEID_I": "Delv_TESTANM08",
           "YY1_PURENTITY_I": "MAC1",
           "YY1_POID_I": "7447090504350892033",
           "YY1_LINEID_I": "LK00301631_TIK_001_001",
@@ -33,7 +33,7 @@
           "YY1_BUSUNITGRP_I": "TikTok",
           "YY1_BUSINESSUNIT_I": "TIK",
           "YY1_BATCHID_I": "a0qUj000002gWQXIA2",
-          "PrepaymentRequestnumber": "testMAC01",
+          "PrepaymentRequestnumber": "TESTANM08",
           "SalesOrderItem": "",
           "CreditMemoRequestItem": "",
           "SalesOrder": "",
@@ -67,7 +67,7 @@
               "CreditMemoRequestItem": "",
               "SalesOrder": "",
               "ConditionType": "ZSFN",
-              "ConditionRateValue": 2390,
+              "ConditionRateValue": 200,
               "ConditionCurrency": "MAD"
             },
             {

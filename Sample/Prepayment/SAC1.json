@@ -20,12 +20,12 @@
             "SalesOrganization": "SAC1",
             "SalesOrderType": "TA",
             "SalesOrderItemsSet": [
-                "SAC1_SIT_46"
+                "TESTSAC_300901"
             ],
             "SalesOrderItem": [
                 {
-                    "YY1_SFDCLINEID_I": "SAC1_SIT_46",
-                    "YY1_SALESFORCEID_I": "SAC1_SIT_46",
+                    "YY1_SFDCLINEID_I": "TESTSAC_300901",
+                    "YY1_SALESFORCEID_I": "TESTSAC_300901",
                     "YY1_PURENTITY_I": "",
                     "YY1_POID_I": "",
                     "YY1_LINEID_I": "",
@@ -35,7 +35,7 @@
                     "YY1_BATCHID_I": "a0qUj000002gWQXIA2",
                     "SalesOrderItem": "",
                     "Isprepayment": "Yes",
-                    "PrepaymentRequestnumber": "SAR01",
+                    "PrepaymentRequestnumber": "SAC_300901",
                     "CreditMemoRequestItem": "",
                     "SalesOrder": "",
                     "RequestedQuantityUnit": "Auction",
@@ -48,7 +48,7 @@
                             "CreditMemoRequestItem": "",
                             "SalesOrder": "",
                             "ConditionType": "ZSFN",
-                            "ConditionRateValue": 2222,
+                            "ConditionRateValue": 1500,
                             "ConditionCurrency": "SAR"
                         }
                     ],
@@ -158,7 +158,7 @@
                                     "BillingPlanItem": "",
                                     "BillingPlanDateCategory": "04",
                                     "BillingPlanBillingDate": "2025-09-01",
-                                    "BillingPlanAmount": "2222.0",
+                                    "BillingPlanAmount": "1500.0",
                                     "BillingBlockReason": ""
                                 }
                             ]

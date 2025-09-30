@@ -20,12 +20,12 @@
             "SalesOrganization": "EGC1",
             "SalesOrderType": "TA",
             "SalesOrderItemsSet": [
-                "EGC1_SIT_23"
+                "ID_EGC300901"
             ],
             "SalesOrderItem": [
                 {
-                    "YY1_SFDCLINEID_I": "EGC1_SIT_23",
-                    "YY1_SALESFORCEID_I": "EGC1_SIT_23",
+                    "YY1_SFDCLINEID_I": "ID_EGC300901",
+                    "YY1_SALESFORCEID_I": "ID_EGC300901",
                     "YY1_PURENTITY_I": "",
                     "YY1_POID_I": "",
                     "YY1_LINEID_I": "",
@@ -35,7 +35,7 @@
                     "YY1_BATCHID_I": "a0qUj000002gWQXIA2",
                     "SalesOrderItem": "",
                     "Isprepayment": "Yes",
-                    "PrepaymentRequestnumber": "EGP21",
+                    "PrepaymentRequestnumber": "EGC300901",
                     "CreditMemoRequestItem": "",
                     "SalesOrder": "",
                     "RequestedQuantityUnit": "Auction",
@@ -48,7 +48,7 @@
                             "CreditMemoRequestItem": "",
                             "SalesOrder": "",
                             "ConditionType": "ZSFN",
-                            "ConditionRateValue": 2222,
+                            "ConditionRateValue": 1500,
                             "ConditionCurrency": "EGP"
                         }
                     ],
@@ -158,7 +158,7 @@
                                     "BillingPlanItem": "",
                                     "BillingPlanDateCategory": "04",
                                     "BillingPlanBillingDate": "2025-09-01",
-                                    "BillingPlanAmount": "2222.0",
+                                    "BillingPlanAmount": "1500.0",
                                     "BillingBlockReason": ""
                                 }
                             ]

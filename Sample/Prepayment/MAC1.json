@@ -20,12 +20,12 @@
             "SalesOrganization": "MAC1",
             "SalesOrderType": "TA",
             "SalesOrderItemsSet": [
-                "TEST_MAC1_SIT_9"
+                "ID_MAC_300901"
             ],
             "SalesOrderItem": [
                 {
-                    "YY1_SFDCLINEID_I": "TEST_MAC1_SIT_9",
-                    "YY1_SALESFORCEID_I": "TEST_MAC1_SIT_9",
+                    "YY1_SFDCLINEID_I": "ID_MAC_300901",
+                    "YY1_SALESFORCEID_I": "ID_MAC_300901",
                     "YY1_PURENTITY_I": "MAC1",
                     "YY1_POID_I": "7447090504350892033",
                     "YY1_LINEID_I": "LK00301631_TIK_001_001",
@@ -35,7 +35,7 @@
                     "YY1_BATCHID_I": "a0qUj000002gWQXIA2",
                     "SalesOrderItem": "",
                     "Isprepayment": "Yes",
-                    "PrepaymentRequestnumber": "TEST_MAC9",
+                    "PrepaymentRequestnumber": "MAC_300901",
                     "CreditMemoRequestItem": "",
                     "SalesOrder": "",
                     "RequestedQuantityUnit": "Auction",
@@ -58,7 +58,7 @@
                             "CreditMemoRequestItem": "",
                             "SalesOrder": "",
                             "ConditionType": "ZSFN",
-                            "ConditionRateValue": 2000,
+                            "ConditionRateValue": 1500,
                             "ConditionCurrency": "MAD"
                         },
                         {
@@ -178,7 +178,7 @@
                                     "BillingPlanItem": "",
                                     "BillingPlanDateCategory": "04",
                                     "BillingPlanBillingDate": "2025-09-06T00:00:00",
-                                    "BillingPlanAmount": "1000.00",
+                                    "BillingPlanAmount": "1500.00",
                                     "BillingBlockReason": ""
                                 }
                             ]
