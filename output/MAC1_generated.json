@@ -5,43 +5,43 @@
         "YY1_SFPROJECTID_H": "LK00301631",
         "YY1_SALESFORCEID_H": "800Uj00000NuujpIAB",
         "YY1_SALESCHANNEL_H": "Traditional (Local Team)",
-        "YY1_REPENTITY_H": "SAC1",
+        "YY1_REPENTITY_H": "MAC1",
         "YY1_REPCOUNTRY_H": "LK",
         "YY1_PERFORMANCE_H": "Client Performance Driven (ROI)",
-        "YY1_MNGENTITY_H": "SAC1",
-        "YY1_IOTYPE_H": "O",
+        "YY1_MNGENTITY_H": "MAC1",
+        "YY1_IOTYPE_H": "",
         "YY1_CLIENT_POID_H": "Salesforce",
         "YY1_BUSUNITGRP_H": "TikTok",
-        "YY1_BUSINESSUNIT_H": "TIK",
+        "YY1_BUSINESSUNIT_H": "",
         "YY1_BATCHID_H": "a0qUj000002gWQXIB4",
         "YY1_AGENCYID_H": "",
-        "YY1_ADVERTISERID_H": "HS58M1PTWJ",
-        "TransactionCurrency": "USD",
-        "SoldToParty": "HS58M1PTWJ",
-        "SalesOrganization": "SAC1",
+        "YY1_ADVERTISERID_H": "EWWCKSMIYR",
+        "TransactionCurrency": "MAD",
+        "SoldToParty": "EWWCKSMIYR",
+        "SalesOrganization": "MAC1",
         "SalesOrderType": "TA",
         "SalesOrderItemsSet": [
-          "Delvr_TestnzbU"
+          "Delvr_TestOTXy"
         ],
         "SalesOrderItem": [
           {
-            "YY1_SFDCLINEID_I": "Delvr_TestnzbU",
-            "YY1_SALESFORCEID_I": "Delvr_TestnzbU",
-            "YY1_PURENTITY_I": "SAC1",
+            "YY1_SFDCLINEID_I": "Delvr_TestOTXy",
+            "YY1_SALESFORCEID_I": "Delvr_TestOTXy",
+            "YY1_PURENTITY_I": "MAC1",
             "YY1_POID_I": "7447090504350892033",
             "YY1_LINEID_I": "LK00301631_TIK_001_001",
-            "YY1_DELIVERYMONTH_I": "2024-12",
+            "YY1_DELIVERYMONTH_I": "",
             "YY1_BUSUNITGRP_I": "TikTok",
-            "YY1_BUSINESSUNIT_I": "TIK",
-            "YY1_BATCHID_I": "Delvr_TestnzbU",
-            "PrepaymentRequestnumber": "TestnzbU",
+            "YY1_BUSINESSUNIT_I": "",
+            "YY1_BATCHID_I": "Delvr_TestOTXy",
+            "PrepaymentRequestnumber": "TestOTXy",
             "SalesOrderItem": "",
             "CreditMemoRequestItem": "",
             "SalesOrder": "",
             "RequestedQuantityUnit": "Auction",
             "RequestedQuantity": 1,
             "ProfitCenter": "TikTok",
-            "ProductionPlant": "SAC1",
+            "ProductionPlant": "MAC1",
             "PricingElement": [
               {
                 "SalesOrderItem": "",
@@ -51,7 +51,7 @@
                 "ConditionRateValue": 1,
                 "ConditionQuantityUnit": "Auction",
                 "ConditionQuantity": 1,
-                "ConditionCurrency": "USD"
+                "ConditionCurrency": "MAD"
               },
               {
                 "SalesOrderItem": "",
@@ -61,15 +61,15 @@
                 "ConditionRateValue": 1,
                 "ConditionQuantityUnit": "Auction",
                 "ConditionQuantity": 1,
-                "ConditionCurrency": "USD"
+                "ConditionCurrency": "MAD"
               },
               {
                 "SalesOrderItem": "",
                 "CreditMemoRequestItem": "",
                 "SalesOrder": "",
                 "ConditionType": "ZSFN",
-                "ConditionRateValue": 1165,
-                "ConditionCurrency": "USD"
+                "ConditionRateValue": 1705,
+                "ConditionCurrency": "MAD"
               },
               {
                 "SalesOrderItem": "",
@@ -77,7 +77,7 @@
                 "SalesOrder": "",
                 "ConditionType": "ZPC0",
                 "ConditionRateValue": 205.39,
-                "ConditionCurrency": "USD"
+                "ConditionCurrency": "MAD"
               }
             ],
             "Material": "Rep",

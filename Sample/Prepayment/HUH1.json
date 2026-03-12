@@ -3,74 +3,90 @@
         {
             "YY1_SFPROJECTID_H": "LK00301631",
             "YY1_SALESFORCEID_H": "500VD00000JhIoMYAV",
+<<<<<<< HEAD
             "YY1_SALESCHANNEL_H": "Traditional (Local Team)",
-            "YY1_REPENTITY_H": "MAC1",
+=======
+            "YY1_SALESCHANNEL_H": " Sales Local ",
+>>>>>>> 723cf4edbc3a6d4511ba3f07070aecc97a010fa6
+            "YY1_REPENTITY_H": "",
             "YY1_REPCOUNTRY_H": "LK",
             "YY1_PERFORMANCE_H": "Client Performance Driven (ROI)",
-            "YY1_MNGENTITY_H": "MAC1",
+            "YY1_MNGENTITY_H": "",
             "YY1_IOTYPE_H": "",
-            "YY1_CLIENT_POID_H": "Salesforce",
+            "YY1_CLIENT_POID_H": "",
             "YY1_BUSUNITGRP_H": "TikTok",
-            "YY1_BUSINESSUNIT_H": "",
+<<<<<<< HEAD
+            "YY1_BUSINESSUNIT_H": "TIK",
             "YY1_BATCHID_H": "a0qUj000002gWQXIB4",
             "YY1_AGENCYID_H": "",
-            "YY1_ADVERTISERID_H": "EWWCKSMIYR",
-            "TransactionCurrency": "MAD",
-            "SoldToParty": "EWWCKSMIYR",
-            "SalesOrganization": "MAC1",
+            "YY1_ADVERTISERID_H": "D2VS19LK97",
+            "TransactionCurrency": "EUR",
+            "SoldToParty": "D2VS19LK97",
+            "SalesOrganization": "HUH1",
             "SalesOrderType": "TA",
             "SalesOrderItemsSet": [
-                "ID_MAC_300901"
+                "TEST_HUH1_4"
             ],
             "SalesOrderItem": [
                 {
-                    "YY1_SFDCLINEID_I": "ID_MAC_300901",
-                    "YY1_SALESFORCEID_I": "ID_MAC_300901",
-                    "YY1_PURENTITY_I": "MAC1",
-                    "YY1_POID_I": "7447090504350892033",
-                    "YY1_LINEID_I": "LK00301631_TIK_001_001",
+                    "YY1_SFDCLINEID_I": "TEST_HUH1_4",
+                    "YY1_SALESFORCEID_I": "TEST_HUH1_4",
+=======
+            "YY1_BUSINESSUNIT_H": "ABM",
+            "YY1_BATCHID_H": "a0qUj000002gWQXIB4",
+            "YY1_AGENCYID_H": "",
+            "YY1_ADVERTISERID_H": "10001528",
+            "TransactionCurrency": "EUR",
+            "SoldToParty": "10001528",
+            "SalesOrganization": "HUH1",
+            "SalesOrderType": "TA",
+            "SalesOrderItemsSet": [
+                "HUH1_SIT_01"
+            ],
+            "SalesOrderItem": [
+                {
+                    "YY1_SFDCLINEID_I": "HUH1_SIT_01",
+                    "YY1_SALESFORCEID_I": "HUH1_SIT_01",
+>>>>>>> 723cf4edbc3a6d4511ba3f07070aecc97a010fa6
+                    "YY1_PURENTITY_I": "",
+                    "YY1_POID_I": "",
+                    "YY1_LINEID_I": "",
                     "YY1_DELIVERYMONTH_I": "",
-                    "YY1_BUSUNITGRP_I": "TikTok",
-                    "YY1_BUSINESSUNIT_I": "",
+                    "YY1_BUSUNITGRP_I": "",
+<<<<<<< HEAD
+                    "YY1_BUSINESSUNIT_I": "TIK",
                     "YY1_BATCHID_I": "a0qUj000002gWQXIA2",
                     "SalesOrderItem": "",
                     "Isprepayment": "Yes",
-                    "PrepaymentRequestnumber": "MAC_300901",
+                    "PrepaymentRequestnumber": "HUH1031025",
+=======
+                    "YY1_BUSINESSUNIT_I": "ABM",
+                    "YY1_BATCHID_I": "a0qUj000002gWQXIA2",
+                    "SalesOrderItem": "",
+                    "Isprepayment": "Yes",
+                    "PrepaymentRequestnumber": "HUH000001",
+>>>>>>> 723cf4edbc3a6d4511ba3f07070aecc97a010fa6
                     "CreditMemoRequestItem": "",
                     "SalesOrder": "",
                     "RequestedQuantityUnit": "Auction",
                     "RequestedQuantity": 1,
                     "ProfitCenter": "TikTok",
-                    "ProductionPlant": "MAC1",
+                    "ProductionPlant": "HUH1",
                     "PricingElement": [
                         {
                             "SalesOrderItem": "",
                             "CreditMemoRequestItem": "",
                             "SalesOrder": "",
-                            "ConditionType": "PC02",
-                            "ConditionRateValue": 1,
-                            "ConditionQuantityUnit": "Auction",
-                            "ConditionQuantity": 1,
-                            "ConditionCurrency": "MAD"
-                        },
-                        {
-                            "SalesOrderItem": "",
-                            "CreditMemoRequestItem": "",
-                            "SalesOrder": "",
                             "ConditionType": "ZSFN",
-                            "ConditionRateValue": 25000,
-                            "ConditionCurrency": "MAD"
-                        },
-                        {
-                            "SalesOrderItem": "",
-                            "CreditMemoRequestItem": "",
-                            "SalesOrder": "",
-                            "ConditionType": "ZPC0",
-                            "ConditionRateValue": 205.39,
-                            "ConditionCurrency": "MAD"
+<<<<<<< HEAD
+                            "ConditionRateValue": 1500,
+=======
+                            "ConditionRateValue": 1000,
+>>>>>>> 723cf4edbc3a6d4511ba3f07070aecc97a010fa6
+                            "ConditionCurrency": "EUR"
                         }
                     ],
-                    "Material": "Rep",
+                    "Material": "Prepayment",
                     "ItemText": [
                         {
                             "SalesOrderItem": "",
@@ -167,9 +183,7 @@
                             "SalesOrder": "",
                             "SalesOrderItem": "",
                             "BillingPlan": "",
-                            "BillingPlanIsInHeader": false
-                        },
-                        {
+                            "BillingPlanIsInHeader": false,
                             "to_billingplanitem": [
                                 {
                                     "SalesOrder": "",
@@ -177,8 +191,13 @@
                                     "BillingPlan": "",
                                     "BillingPlanItem": "",
                                     "BillingPlanDateCategory": "04",
-                                    "BillingPlanBillingDate": "2026-02-11T00:00:00",
-                                    "BillingPlanAmount": "25000.00",
+<<<<<<< HEAD
+                                    "BillingPlanBillingDate": "2025-10-03",
+                                    "BillingPlanAmount": "1500.0",
+=======
+                                    "BillingPlanBillingDate": "2025-09-01",
+                                    "BillingPlanAmount": "1000",
+>>>>>>> 723cf4edbc3a6d4511ba3f07070aecc97a010fa6
                                     "BillingBlockReason": ""
                                 }
                             ]
@@ -188,7 +207,7 @@
             ],
             "SalesOrder": "",
             "CreditMemoRequest": "",
-            "PurchaseOrderByCustomer": "abcxyz",
+            "PurchaseOrderByCustomer": "HUH1STPOH115",
             "OrganizationDivision": "10",
             "DistributionChannel": "20"
         }

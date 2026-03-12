@@ -1,25 +1,7 @@
 {
   "record": [
     {
-      "case": "OneToMany-Happy-UnderDelivery"
-    },
-    {
-      "case": "ManyToOne-Happy-OverDelivery"
-    },
-    {
-      "case": "ManyToOne-Happy-OverDelivery"
-    },
-    {
-      "case": "ManyToOne-Happy-OverDelivery"
-    },
-    {
-      "case": "OneToMany-Happy-UnderDelivery"
-    },
-    {
-      "case": "ManyToOne-Happy-UnderDelivery"
-    },
-    {
-      "case": "OneToMany-Happy-UnderDelivery"
+      "case": "OneToOne-Happy-UnderDelivery"
     }
   ]
 }

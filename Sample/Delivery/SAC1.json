@@ -15,7 +15,7 @@
             "YY1_BATCHID_H": "a0qUj000002gWQXIB4",
             "YY1_AGENCYID_H": "",
             "YY1_ADVERTISERID_H": "HS58M1PTWJ",
-            "TransactionCurrency": "SAR",
+            "TransactionCurrency": "USD",
             "SoldToParty": "HS58M1PTWJ",
             "SalesOrganization": "SAC1",
             "SalesOrderType": "TA",
@@ -50,7 +50,7 @@
                             "ConditionRateValue": 1,
                             "ConditionQuantityUnit": "Auction",
                             "ConditionQuantity": 1,
-                            "ConditionCurrency": "SAR"
+                            "ConditionCurrency": "USD"
                         },
                         {
                             "SalesOrderItem": "",
@@ -60,7 +60,7 @@
                             "ConditionRateValue": 1,
                             "ConditionQuantityUnit": "Auction",
                             "ConditionQuantity": 1,
-                            "ConditionCurrency": "SAR"
+                            "ConditionCurrency": "USD"
                         },
                         {
                             "SalesOrderItem": "",
@@ -68,7 +68,7 @@
                             "SalesOrder": "",
                             "ConditionType": "ZSFN",
                             "ConditionRateValue": 850,
-                            "ConditionCurrency": "SAR"
+                            "ConditionCurrency": "USD"
                         },
                         {
                             "SalesOrderItem": "",
@@ -76,7 +76,7 @@
                             "SalesOrder": "",
                             "ConditionType": "ZPC0",
                             "ConditionRateValue": 205.39,
-                            "ConditionCurrency": "SAR"
+                            "ConditionCurrency": "USD"
                         }
                     ],
                     "Material": "Rep",

@@ -15,7 +15,7 @@
             "YY1_BATCHID_H": "a0qUj000002gWQXIB4",
             "YY1_AGENCYID_H": "",
             "YY1_ADVERTISERID_H": "HS58M1PTWJ",
-            "TransactionCurrency": "SAR",
+            "TransactionCurrency": "USD",
             "SoldToParty": "HS58M1PTWJ",
             "SalesOrganization": "SAC1",
             "SalesOrderType": "TA",
@@ -49,7 +49,7 @@
                             "SalesOrder": "",
                             "ConditionType": "ZSFN",
                             "ConditionRateValue": 1500,
-                            "ConditionCurrency": "SAR"
+                            "ConditionCurrency": "USD"
                         }
                     ],
                     "Material": "Prepayment",

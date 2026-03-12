@@ -71,7 +71,17 @@ function getCurrency(companyCode) {
             'BGH2': 'EUR',
             'HUH1': 'EUR',
             'SKH1': 'EUR',
-            'CZH1': 'EUR'
+            'CZH1': 'EUR',
+            'MKH1': 'EUR',
+            'ITI1': 'EUR',
+            'GRH1': 'EUR',
+            'ROH1': 'EUR',
+            'PLH1': 'EUR',
+            'HRH1': 'EUR',
+            'UAH1': 'EUR',
+            'ESI2': 'EUR',
+            'ZAA1': 'EUR',
+            'ZAA2': 'EUR'
         };
         return currencyMap[companyCode] || 'USD';
     } else {
@@ -87,10 +97,20 @@ function getSoldToParty(companyCode) {
         'MAC1': '4F32L8O0DG',
         'EGC1': '275554HENP',
         'AEC1': '4F32L8O0DG',
-        'HUH1': '10001528',
-        'SKH1': '10001528',
-        'CZH1': '10001541',
-        'BGH2': '10001536'
+        'HUH1': 'D2VS19LK97',
+        'SKH1': 'X64I2F7E27',
+        'CZH1': '2CRZ81PD6O',
+        'BGH2': '00AZ3M2NOX',
+        'MKH1': 'YJV239VNJL',
+        'ITI1': 'TESTITI101',
+        'GRH1': 'GAG02YWHDS',
+        'ROH1': '6O8A4WWPIF',
+        'PLH1': '1RYDAG8E4X',
+        'HRH1': '10000281',
+        'UAH1': '1OIDEKUF7T',
+        'ESI2': 'B5C97ZD25M',
+        'ZAA1': 'UVWILZ3NKD',
+        'ZAA2': 'UVWILZ3NKD'
     };
     return soldToPartyMap[companyCode] || 'Unknown';
 }

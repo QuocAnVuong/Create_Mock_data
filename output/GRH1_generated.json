@@ -1,0 +1,1552 @@
+[
+  {
+    "SalesOrder": [
+      {
+        "YY1_SFPROJECTID_H": "LK00301631",
+        "YY1_SALESFORCEID_H": "500VD00000JhIoMYAV",
+        "YY1_SALESCHANNEL_H": " Sales Local ",
+        "YY1_REPENTITY_H": "",
+        "YY1_REPCOUNTRY_H": "LK",
+        "YY1_PERFORMANCE_H": "Client Performance Driven (ROI)",
+        "YY1_MNGENTITY_H": "",
+        "YY1_IOTYPE_H": "",
+        "YY1_CLIENT_POID_H": "",
+        "YY1_BUSUNITGRP_H": "TikTok",
+        "YY1_BUSINESSUNIT_H": "ABM",
+        "YY1_BATCHID_H": "a0qUj000002gWQXIB4",
+        "YY1_AGENCYID_H": "",
+        "YY1_ADVERTISERID_H": "GAG02YWHDS",
+        "TransactionCurrency": "EUR",
+        "SoldToParty": "GAG02YWHDS",
+        "SalesOrganization": "GRH1",
+        "SalesOrderType": "TA",
+        "SalesOrderItemsSet": [
+          "Delvr_Testa6en"
+        ],
+        "SalesOrderItem": [
+          {
+            "YY1_SFDCLINEID_I": "Delvr_Testa6en",
+            "YY1_SALESFORCEID_I": "Delvr_Testa6en",
+            "YY1_PURENTITY_I": "",
+            "YY1_POID_I": "",
+            "YY1_LINEID_I": "",
+            "YY1_DELIVERYMONTH_I": "",
+            "YY1_BUSUNITGRP_I": "",
+            "YY1_BUSINESSUNIT_I": "ABM",
+            "YY1_BATCHID_I": "Delvr_Testa6en",
+            "SalesOrderItem": "",
+            "PrepaymentRequestnumber": "Testa6en",
+            "CreditMemoRequestItem": "",
+            "SalesOrder": "",
+            "RequestedQuantityUnit": "Auction",
+            "RequestedQuantity": 1,
+            "ProfitCenter": "TikTok",
+            "ProductionPlant": "GRH1",
+            "PricingElement": [
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "ConditionType": "ZSFN",
+                "ConditionRateValue": 2316,
+                "ConditionCurrency": "EUR"
+              }
+            ],
+            "Material": "REP",
+            "ItemText": [
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX03",
+                "LongText": "TikTok SL_TikTok_Atlas Axillia_Atlas Axillia Co. (Pvt) Ltd ",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX04",
+                "LongText": "00258744",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX07",
+                "LongText": "Atlas Axillia Co. (Pvt) Ltd Sri Lanka",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX08",
+                "LongText": "2024-12-01T00:00:00Z",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX09",
+                "LongText": "2024-12-31T00:00:00Z",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX10",
+                "LongText": "Atlas Axillia Company (Private) Ltd",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX12",
+                "LongText": "Auction In-Feed Video",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX13",
+                "LongText": "Dileena Fernando",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX14",
+                "LongText": "233.40",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX15",
+                "LongText": "292.583300",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX16",
+                "LongText": "292.583300",
+                "Language": "EN"
+              }
+            ],
+            "ItemBillingBlockReason": ""
+          }
+        ],
+        "SalesOrder": "",
+        "CreditMemoRequest": "",
+        "PurchaseOrderByCustomer": "GRH1STPOH115",
+        "OrganizationDivision": "10",
+        "DistributionChannel": "20"
+      }
+    ]
+  },
+  {
+    "SalesOrder": [
+      {
+        "YY1_SFPROJECTID_H": "LK00301631",
+        "YY1_SALESFORCEID_H": "500VD00000JhIoMYAV",
+        "YY1_SALESCHANNEL_H": " Sales Local ",
+        "YY1_REPENTITY_H": "",
+        "YY1_REPCOUNTRY_H": "LK",
+        "YY1_PERFORMANCE_H": "Client Performance Driven (ROI)",
+        "YY1_MNGENTITY_H": "",
+        "YY1_IOTYPE_H": "",
+        "YY1_CLIENT_POID_H": "",
+        "YY1_BUSUNITGRP_H": "TikTok",
+        "YY1_BUSINESSUNIT_H": "ABM",
+        "YY1_BATCHID_H": "a0qUj000002gWQXIB4",
+        "YY1_AGENCYID_H": "",
+        "YY1_ADVERTISERID_H": "GAG02YWHDS",
+        "TransactionCurrency": "EUR",
+        "SoldToParty": "GAG02YWHDS",
+        "SalesOrganization": "GRH1",
+        "SalesOrderType": "TA",
+        "SalesOrderItemsSet": [
+          "Delvr_TestrYkV"
+        ],
+        "SalesOrderItem": [
+          {
+            "YY1_SFDCLINEID_I": "Delvr_TestrYkV",
+            "YY1_SALESFORCEID_I": "Delvr_TestrYkV",
+            "YY1_PURENTITY_I": "",
+            "YY1_POID_I": "",
+            "YY1_LINEID_I": "",
+            "YY1_DELIVERYMONTH_I": "",
+            "YY1_BUSUNITGRP_I": "",
+            "YY1_BUSINESSUNIT_I": "ABM",
+            "YY1_BATCHID_I": "Delvr_TestrYkV",
+            "SalesOrderItem": "",
+            "PrepaymentRequestnumber": "TestrYkV",
+            "CreditMemoRequestItem": "",
+            "SalesOrder": "",
+            "RequestedQuantityUnit": "Auction",
+            "RequestedQuantity": 1,
+            "ProfitCenter": "TikTok",
+            "ProductionPlant": "GRH1",
+            "PricingElement": [
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "ConditionType": "ZSFN",
+                "ConditionRateValue": 3149,
+                "ConditionCurrency": "EUR"
+              }
+            ],
+            "Material": "REP",
+            "ItemText": [
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX03",
+                "LongText": "TikTok SL_TikTok_Atlas Axillia_Atlas Axillia Co. (Pvt) Ltd ",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX04",
+                "LongText": "00258744",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX07",
+                "LongText": "Atlas Axillia Co. (Pvt) Ltd Sri Lanka",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX08",
+                "LongText": "2024-12-01T00:00:00Z",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX09",
+                "LongText": "2024-12-31T00:00:00Z",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX10",
+                "LongText": "Atlas Axillia Company (Private) Ltd",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX12",
+                "LongText": "Auction In-Feed Video",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX13",
+                "LongText": "Dileena Fernando",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX14",
+                "LongText": "233.40",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX15",
+                "LongText": "292.583300",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX16",
+                "LongText": "292.583300",
+                "Language": "EN"
+              }
+            ],
+            "ItemBillingBlockReason": ""
+          }
+        ],
+        "SalesOrder": "",
+        "CreditMemoRequest": "",
+        "PurchaseOrderByCustomer": "GRH1STPOH115",
+        "OrganizationDivision": "10",
+        "DistributionChannel": "20"
+      }
+    ]
+  },
+  {
+    "SalesOrder": [
+      {
+        "YY1_SFPROJECTID_H": "LK00301631",
+        "YY1_SALESFORCEID_H": "500VD00000JhIoMYAV",
+        "YY1_SALESCHANNEL_H": " Sales Local ",
+        "YY1_REPENTITY_H": "",
+        "YY1_REPCOUNTRY_H": "LK",
+        "YY1_PERFORMANCE_H": "Client Performance Driven (ROI)",
+        "YY1_MNGENTITY_H": "",
+        "YY1_IOTYPE_H": "",
+        "YY1_CLIENT_POID_H": "",
+        "YY1_BUSUNITGRP_H": "TikTok",
+        "YY1_BUSINESSUNIT_H": "ABM",
+        "YY1_BATCHID_H": "a0qUj000002gWQXIB4",
+        "YY1_AGENCYID_H": "",
+        "YY1_ADVERTISERID_H": "GAG02YWHDS",
+        "TransactionCurrency": "EUR",
+        "SoldToParty": "GAG02YWHDS",
+        "SalesOrganization": "GRH1",
+        "SalesOrderType": "TA",
+        "SalesOrderItemsSet": [
+          "Delvr_TestuVJE"
+        ],
+        "SalesOrderItem": [
+          {
+            "YY1_SFDCLINEID_I": "Delvr_TestuVJE",
+            "YY1_SALESFORCEID_I": "Delvr_TestuVJE",
+            "YY1_PURENTITY_I": "",
+            "YY1_POID_I": "",
+            "YY1_LINEID_I": "",
+            "YY1_DELIVERYMONTH_I": "",
+            "YY1_BUSUNITGRP_I": "",
+            "YY1_BUSINESSUNIT_I": "ABM",
+            "YY1_BATCHID_I": "Delvr_TestuVJE",
+            "SalesOrderItem": "",
+            "PrepaymentRequestnumber": "TestuVJE",
+            "CreditMemoRequestItem": "",
+            "SalesOrder": "",
+            "RequestedQuantityUnit": "Auction",
+            "RequestedQuantity": 1,
+            "ProfitCenter": "TikTok",
+            "ProductionPlant": "GRH1",
+            "PricingElement": [
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "ConditionType": "ZSFN",
+                "ConditionRateValue": 789,
+                "ConditionCurrency": "EUR"
+              }
+            ],
+            "Material": "REP",
+            "ItemText": [
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX03",
+                "LongText": "TikTok SL_TikTok_Atlas Axillia_Atlas Axillia Co. (Pvt) Ltd ",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX04",
+                "LongText": "00258744",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX07",
+                "LongText": "Atlas Axillia Co. (Pvt) Ltd Sri Lanka",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX08",
+                "LongText": "2024-12-01T00:00:00Z",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX09",
+                "LongText": "2024-12-31T00:00:00Z",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX10",
+                "LongText": "Atlas Axillia Company (Private) Ltd",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX12",
+                "LongText": "Auction In-Feed Video",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX13",
+                "LongText": "Dileena Fernando",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX14",
+                "LongText": "233.40",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX15",
+                "LongText": "292.583300",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX16",
+                "LongText": "292.583300",
+                "Language": "EN"
+              }
+            ],
+            "ItemBillingBlockReason": ""
+          }
+        ],
+        "SalesOrder": "",
+        "CreditMemoRequest": "",
+        "PurchaseOrderByCustomer": "GRH1STPOH115",
+        "OrganizationDivision": "10",
+        "DistributionChannel": "20"
+      }
+    ]
+  },
+  {
+    "SalesOrder": [
+      {
+        "YY1_SFPROJECTID_H": "LK00301631",
+        "YY1_SALESFORCEID_H": "500VD00000JhIoMYAV",
+        "YY1_SALESCHANNEL_H": " Sales Local ",
+        "YY1_REPENTITY_H": "",
+        "YY1_REPCOUNTRY_H": "LK",
+        "YY1_PERFORMANCE_H": "Client Performance Driven (ROI)",
+        "YY1_MNGENTITY_H": "",
+        "YY1_IOTYPE_H": "",
+        "YY1_CLIENT_POID_H": "",
+        "YY1_BUSUNITGRP_H": "TikTok",
+        "YY1_BUSINESSUNIT_H": "ABM",
+        "YY1_BATCHID_H": "a0qUj000002gWQXIB4",
+        "YY1_AGENCYID_H": "",
+        "YY1_ADVERTISERID_H": "GAG02YWHDS",
+        "TransactionCurrency": "EUR",
+        "SoldToParty": "GAG02YWHDS",
+        "SalesOrganization": "GRH1",
+        "SalesOrderType": "TA",
+        "SalesOrderItemsSet": [
+          "Delvr_TestVDZx"
+        ],
+        "SalesOrderItem": [
+          {
+            "YY1_SFDCLINEID_I": "Delvr_TestVDZx",
+            "YY1_SALESFORCEID_I": "Delvr_TestVDZx",
+            "YY1_PURENTITY_I": "",
+            "YY1_POID_I": "",
+            "YY1_LINEID_I": "",
+            "YY1_DELIVERYMONTH_I": "",
+            "YY1_BUSUNITGRP_I": "",
+            "YY1_BUSINESSUNIT_I": "ABM",
+            "YY1_BATCHID_I": "Delvr_TestVDZx",
+            "SalesOrderItem": "",
+            "PrepaymentRequestnumber": "TestVDZx",
+            "CreditMemoRequestItem": "",
+            "SalesOrder": "",
+            "RequestedQuantityUnit": "Auction",
+            "RequestedQuantity": 1,
+            "ProfitCenter": "TikTok",
+            "ProductionPlant": "GRH1",
+            "PricingElement": [
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "ConditionType": "ZSFN",
+                "ConditionRateValue": 1780,
+                "ConditionCurrency": "EUR"
+              }
+            ],
+            "Material": "REP",
+            "ItemText": [
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX03",
+                "LongText": "TikTok SL_TikTok_Atlas Axillia_Atlas Axillia Co. (Pvt) Ltd ",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX04",
+                "LongText": "00258744",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX07",
+                "LongText": "Atlas Axillia Co. (Pvt) Ltd Sri Lanka",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX08",
+                "LongText": "2024-12-01T00:00:00Z",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX09",
+                "LongText": "2024-12-31T00:00:00Z",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX10",
+                "LongText": "Atlas Axillia Company (Private) Ltd",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX12",
+                "LongText": "Auction In-Feed Video",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX13",
+                "LongText": "Dileena Fernando",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX14",
+                "LongText": "233.40",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX15",
+                "LongText": "292.583300",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX16",
+                "LongText": "292.583300",
+                "Language": "EN"
+              }
+            ],
+            "ItemBillingBlockReason": ""
+          }
+        ],
+        "SalesOrder": "",
+        "CreditMemoRequest": "",
+        "PurchaseOrderByCustomer": "GRH1STPOH115",
+        "OrganizationDivision": "10",
+        "DistributionChannel": "20"
+      }
+    ]
+  },
+  {
+    "SalesOrder": [
+      {
+        "YY1_SFPROJECTID_H": "LK00301631",
+        "YY1_SALESFORCEID_H": "500VD00000JhIoMYAV",
+        "YY1_SALESCHANNEL_H": " Sales Local ",
+        "YY1_REPENTITY_H": "",
+        "YY1_REPCOUNTRY_H": "LK",
+        "YY1_PERFORMANCE_H": "Client Performance Driven (ROI)",
+        "YY1_MNGENTITY_H": "",
+        "YY1_IOTYPE_H": "",
+        "YY1_CLIENT_POID_H": "",
+        "YY1_BUSUNITGRP_H": "TikTok",
+        "YY1_BUSINESSUNIT_H": "ABM",
+        "YY1_BATCHID_H": "a0qUj000002gWQXIB4",
+        "YY1_AGENCYID_H": "",
+        "YY1_ADVERTISERID_H": "GAG02YWHDS",
+        "TransactionCurrency": "EUR",
+        "SoldToParty": "GAG02YWHDS",
+        "SalesOrganization": "GRH1",
+        "SalesOrderType": "TA",
+        "SalesOrderItemsSet": [
+          "Delvr_Testtn7X"
+        ],
+        "SalesOrderItem": [
+          {
+            "YY1_SFDCLINEID_I": "Delvr_Testtn7X",
+            "YY1_SALESFORCEID_I": "Delvr_Testtn7X",
+            "YY1_PURENTITY_I": "",
+            "YY1_POID_I": "",
+            "YY1_LINEID_I": "",
+            "YY1_DELIVERYMONTH_I": "",
+            "YY1_BUSUNITGRP_I": "",
+            "YY1_BUSINESSUNIT_I": "ABM",
+            "YY1_BATCHID_I": "Delvr_Testtn7X",
+            "SalesOrderItem": "",
+            "PrepaymentRequestnumber": "Testtn7X",
+            "CreditMemoRequestItem": "",
+            "SalesOrder": "",
+            "RequestedQuantityUnit": "Auction",
+            "RequestedQuantity": 1,
+            "ProfitCenter": "TikTok",
+            "ProductionPlant": "GRH1",
+            "PricingElement": [
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "ConditionType": "ZSFN",
+                "ConditionRateValue": 1815,
+                "ConditionCurrency": "EUR"
+              }
+            ],
+            "Material": "REP",
+            "ItemText": [
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX03",
+                "LongText": "TikTok SL_TikTok_Atlas Axillia_Atlas Axillia Co. (Pvt) Ltd ",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX04",
+                "LongText": "00258744",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX07",
+                "LongText": "Atlas Axillia Co. (Pvt) Ltd Sri Lanka",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX08",
+                "LongText": "2024-12-01T00:00:00Z",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX09",
+                "LongText": "2024-12-31T00:00:00Z",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX10",
+                "LongText": "Atlas Axillia Company (Private) Ltd",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX12",
+                "LongText": "Auction In-Feed Video",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX13",
+                "LongText": "Dileena Fernando",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX14",
+                "LongText": "233.40",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX15",
+                "LongText": "292.583300",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX16",
+                "LongText": "292.583300",
+                "Language": "EN"
+              }
+            ],
+            "ItemBillingBlockReason": ""
+          }
+        ],
+        "SalesOrder": "",
+        "CreditMemoRequest": "",
+        "PurchaseOrderByCustomer": "GRH1STPOH115",
+        "OrganizationDivision": "10",
+        "DistributionChannel": "20"
+      }
+    ]
+  },
+  {
+    "SalesOrder": [
+      {
+        "YY1_SFPROJECTID_H": "LK00301631",
+        "YY1_SALESFORCEID_H": "500VD00000JhIoMYAV",
+        "YY1_SALESCHANNEL_H": " Sales Local ",
+        "YY1_REPENTITY_H": "",
+        "YY1_REPCOUNTRY_H": "LK",
+        "YY1_PERFORMANCE_H": "Client Performance Driven (ROI)",
+        "YY1_MNGENTITY_H": "",
+        "YY1_IOTYPE_H": "",
+        "YY1_CLIENT_POID_H": "",
+        "YY1_BUSUNITGRP_H": "TikTok",
+        "YY1_BUSINESSUNIT_H": "ABM",
+        "YY1_BATCHID_H": "a0qUj000002gWQXIB4",
+        "YY1_AGENCYID_H": "",
+        "YY1_ADVERTISERID_H": "GAG02YWHDS",
+        "TransactionCurrency": "EUR",
+        "SoldToParty": "GAG02YWHDS",
+        "SalesOrganization": "GRH1",
+        "SalesOrderType": "TA",
+        "SalesOrderItemsSet": [
+          "Delvr_TestGcAd"
+        ],
+        "SalesOrderItem": [
+          {
+            "YY1_SFDCLINEID_I": "Delvr_TestGcAd",
+            "YY1_SALESFORCEID_I": "Delvr_TestGcAd",
+            "YY1_PURENTITY_I": "",
+            "YY1_POID_I": "",
+            "YY1_LINEID_I": "",
+            "YY1_DELIVERYMONTH_I": "",
+            "YY1_BUSUNITGRP_I": "",
+            "YY1_BUSINESSUNIT_I": "ABM",
+            "YY1_BATCHID_I": "Delvr_TestGcAd",
+            "SalesOrderItem": "",
+            "PrepaymentRequestnumber": "TestGcAd",
+            "CreditMemoRequestItem": "",
+            "SalesOrder": "",
+            "RequestedQuantityUnit": "Auction",
+            "RequestedQuantity": 1,
+            "ProfitCenter": "TikTok",
+            "ProductionPlant": "GRH1",
+            "PricingElement": [
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "ConditionType": "ZSFN",
+                "ConditionRateValue": 2472,
+                "ConditionCurrency": "EUR"
+              }
+            ],
+            "Material": "REP",
+            "ItemText": [
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX03",
+                "LongText": "TikTok SL_TikTok_Atlas Axillia_Atlas Axillia Co. (Pvt) Ltd ",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX04",
+                "LongText": "00258744",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX07",
+                "LongText": "Atlas Axillia Co. (Pvt) Ltd Sri Lanka",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX08",
+                "LongText": "2024-12-01T00:00:00Z",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX09",
+                "LongText": "2024-12-31T00:00:00Z",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX10",
+                "LongText": "Atlas Axillia Company (Private) Ltd",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX12",
+                "LongText": "Auction In-Feed Video",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX13",
+                "LongText": "Dileena Fernando",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX14",
+                "LongText": "233.40",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX15",
+                "LongText": "292.583300",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX16",
+                "LongText": "292.583300",
+                "Language": "EN"
+              }
+            ],
+            "ItemBillingBlockReason": ""
+          }
+        ],
+        "SalesOrder": "",
+        "CreditMemoRequest": "",
+        "PurchaseOrderByCustomer": "GRH1STPOH115",
+        "OrganizationDivision": "10",
+        "DistributionChannel": "20"
+      }
+    ]
+  },
+  {
+    "SalesOrder": [
+      {
+        "YY1_SFPROJECTID_H": "LK00301631",
+        "YY1_SALESFORCEID_H": "500VD00000JhIoMYAV",
+        "YY1_SALESCHANNEL_H": " Sales Local ",
+        "YY1_REPENTITY_H": "",
+        "YY1_REPCOUNTRY_H": "LK",
+        "YY1_PERFORMANCE_H": "Client Performance Driven (ROI)",
+        "YY1_MNGENTITY_H": "",
+        "YY1_IOTYPE_H": "",
+        "YY1_CLIENT_POID_H": "",
+        "YY1_BUSUNITGRP_H": "TikTok",
+        "YY1_BUSINESSUNIT_H": "ABM",
+        "YY1_BATCHID_H": "a0qUj000002gWQXIB4",
+        "YY1_AGENCYID_H": "",
+        "YY1_ADVERTISERID_H": "GAG02YWHDS",
+        "TransactionCurrency": "EUR",
+        "SoldToParty": "GAG02YWHDS",
+        "SalesOrganization": "GRH1",
+        "SalesOrderType": "TA",
+        "SalesOrderItemsSet": [
+          "Delvr_Test6HSz"
+        ],
+        "SalesOrderItem": [
+          {
+            "YY1_SFDCLINEID_I": "Delvr_Test6HSz",
+            "YY1_SALESFORCEID_I": "Delvr_Test6HSz",
+            "YY1_PURENTITY_I": "",
+            "YY1_POID_I": "",
+            "YY1_LINEID_I": "",
+            "YY1_DELIVERYMONTH_I": "",
+            "YY1_BUSUNITGRP_I": "",
+            "YY1_BUSINESSUNIT_I": "ABM",
+            "YY1_BATCHID_I": "Delvr_Test6HSz",
+            "SalesOrderItem": "",
+            "PrepaymentRequestnumber": "Test6HSz",
+            "CreditMemoRequestItem": "",
+            "SalesOrder": "",
+            "RequestedQuantityUnit": "Auction",
+            "RequestedQuantity": 1,
+            "ProfitCenter": "TikTok",
+            "ProductionPlant": "GRH1",
+            "PricingElement": [
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "ConditionType": "ZSFN",
+                "ConditionRateValue": 1103,
+                "ConditionCurrency": "EUR"
+              }
+            ],
+            "Material": "REP",
+            "ItemText": [
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX03",
+                "LongText": "TikTok SL_TikTok_Atlas Axillia_Atlas Axillia Co. (Pvt) Ltd ",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX04",
+                "LongText": "00258744",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX07",
+                "LongText": "Atlas Axillia Co. (Pvt) Ltd Sri Lanka",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX08",
+                "LongText": "2024-12-01T00:00:00Z",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX09",
+                "LongText": "2024-12-31T00:00:00Z",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX10",
+                "LongText": "Atlas Axillia Company (Private) Ltd",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX12",
+                "LongText": "Auction In-Feed Video",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX13",
+                "LongText": "Dileena Fernando",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX14",
+                "LongText": "233.40",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX15",
+                "LongText": "292.583300",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX16",
+                "LongText": "292.583300",
+                "Language": "EN"
+              }
+            ],
+            "ItemBillingBlockReason": ""
+          }
+        ],
+        "SalesOrder": "",
+        "CreditMemoRequest": "",
+        "PurchaseOrderByCustomer": "GRH1STPOH115",
+        "OrganizationDivision": "10",
+        "DistributionChannel": "20"
+      }
+    ]
+  },
+  {
+    "SalesOrder": [
+      {
+        "YY1_SFPROJECTID_H": "LK00301631",
+        "YY1_SALESFORCEID_H": "500VD00000JhIoMYAV",
+        "YY1_SALESCHANNEL_H": " Sales Local ",
+        "YY1_REPENTITY_H": "",
+        "YY1_REPCOUNTRY_H": "LK",
+        "YY1_PERFORMANCE_H": "Client Performance Driven (ROI)",
+        "YY1_MNGENTITY_H": "",
+        "YY1_IOTYPE_H": "",
+        "YY1_CLIENT_POID_H": "",
+        "YY1_BUSUNITGRP_H": "TikTok",
+        "YY1_BUSINESSUNIT_H": "ABM",
+        "YY1_BATCHID_H": "a0qUj000002gWQXIB4",
+        "YY1_AGENCYID_H": "",
+        "YY1_ADVERTISERID_H": "GAG02YWHDS",
+        "TransactionCurrency": "EUR",
+        "SoldToParty": "GAG02YWHDS",
+        "SalesOrganization": "GRH1",
+        "SalesOrderType": "TA",
+        "SalesOrderItemsSet": [
+          "Delvr_TestreD9"
+        ],
+        "SalesOrderItem": [
+          {
+            "YY1_SFDCLINEID_I": "Delvr_TestreD9",
+            "YY1_SALESFORCEID_I": "Delvr_TestreD9",
+            "YY1_PURENTITY_I": "",
+            "YY1_POID_I": "",
+            "YY1_LINEID_I": "",
+            "YY1_DELIVERYMONTH_I": "",
+            "YY1_BUSUNITGRP_I": "",
+            "YY1_BUSINESSUNIT_I": "ABM",
+            "YY1_BATCHID_I": "Delvr_TestreD9",
+            "SalesOrderItem": "",
+            "PrepaymentRequestnumber": "TestreD9",
+            "CreditMemoRequestItem": "",
+            "SalesOrder": "",
+            "RequestedQuantityUnit": "Auction",
+            "RequestedQuantity": 1,
+            "ProfitCenter": "TikTok",
+            "ProductionPlant": "GRH1",
+            "PricingElement": [
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "ConditionType": "ZSFN",
+                "ConditionRateValue": 1886,
+                "ConditionCurrency": "EUR"
+              }
+            ],
+            "Material": "REP",
+            "ItemText": [
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX03",
+                "LongText": "TikTok SL_TikTok_Atlas Axillia_Atlas Axillia Co. (Pvt) Ltd ",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX04",
+                "LongText": "00258744",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX07",
+                "LongText": "Atlas Axillia Co. (Pvt) Ltd Sri Lanka",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX08",
+                "LongText": "2024-12-01T00:00:00Z",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX09",
+                "LongText": "2024-12-31T00:00:00Z",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX10",
+                "LongText": "Atlas Axillia Company (Private) Ltd",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX12",
+                "LongText": "Auction In-Feed Video",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX13",
+                "LongText": "Dileena Fernando",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX14",
+                "LongText": "233.40",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX15",
+                "LongText": "292.583300",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX16",
+                "LongText": "292.583300",
+                "Language": "EN"
+              }
+            ],
+            "ItemBillingBlockReason": ""
+          }
+        ],
+        "SalesOrder": "",
+        "CreditMemoRequest": "",
+        "PurchaseOrderByCustomer": "GRH1STPOH115",
+        "OrganizationDivision": "10",
+        "DistributionChannel": "20"
+      }
+    ]
+  },
+  {
+    "SalesOrder": [
+      {
+        "YY1_SFPROJECTID_H": "LK00301631",
+        "YY1_SALESFORCEID_H": "500VD00000JhIoMYAV",
+        "YY1_SALESCHANNEL_H": " Sales Local ",
+        "YY1_REPENTITY_H": "",
+        "YY1_REPCOUNTRY_H": "LK",
+        "YY1_PERFORMANCE_H": "Client Performance Driven (ROI)",
+        "YY1_MNGENTITY_H": "",
+        "YY1_IOTYPE_H": "",
+        "YY1_CLIENT_POID_H": "",
+        "YY1_BUSUNITGRP_H": "TikTok",
+        "YY1_BUSINESSUNIT_H": "ABM",
+        "YY1_BATCHID_H": "a0qUj000002gWQXIB4",
+        "YY1_AGENCYID_H": "",
+        "YY1_ADVERTISERID_H": "GAG02YWHDS",
+        "TransactionCurrency": "EUR",
+        "SoldToParty": "GAG02YWHDS",
+        "SalesOrganization": "GRH1",
+        "SalesOrderType": "TA",
+        "SalesOrderItemsSet": [
+          "Delvr_Test8b2S"
+        ],
+        "SalesOrderItem": [
+          {
+            "YY1_SFDCLINEID_I": "Delvr_Test8b2S",
+            "YY1_SALESFORCEID_I": "Delvr_Test8b2S",
+            "YY1_PURENTITY_I": "",
+            "YY1_POID_I": "",
+            "YY1_LINEID_I": "",
+            "YY1_DELIVERYMONTH_I": "",
+            "YY1_BUSUNITGRP_I": "",
+            "YY1_BUSINESSUNIT_I": "ABM",
+            "YY1_BATCHID_I": "Delvr_Test8b2S",
+            "SalesOrderItem": "",
+            "PrepaymentRequestnumber": "Test8b2S",
+            "CreditMemoRequestItem": "",
+            "SalesOrder": "",
+            "RequestedQuantityUnit": "Auction",
+            "RequestedQuantity": 1,
+            "ProfitCenter": "TikTok",
+            "ProductionPlant": "GRH1",
+            "PricingElement": [
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "ConditionType": "ZSFN",
+                "ConditionRateValue": 1865,
+                "ConditionCurrency": "EUR"
+              }
+            ],
+            "Material": "REP",
+            "ItemText": [
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX03",
+                "LongText": "TikTok SL_TikTok_Atlas Axillia_Atlas Axillia Co. (Pvt) Ltd ",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX04",
+                "LongText": "00258744",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX07",
+                "LongText": "Atlas Axillia Co. (Pvt) Ltd Sri Lanka",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX08",
+                "LongText": "2024-12-01T00:00:00Z",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX09",
+                "LongText": "2024-12-31T00:00:00Z",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX10",
+                "LongText": "Atlas Axillia Company (Private) Ltd",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX12",
+                "LongText": "Auction In-Feed Video",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX13",
+                "LongText": "Dileena Fernando",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX14",
+                "LongText": "233.40",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX15",
+                "LongText": "292.583300",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX16",
+                "LongText": "292.583300",
+                "Language": "EN"
+              }
+            ],
+            "ItemBillingBlockReason": ""
+          }
+        ],
+        "SalesOrder": "",
+        "CreditMemoRequest": "",
+        "PurchaseOrderByCustomer": "GRH1STPOH115",
+        "OrganizationDivision": "10",
+        "DistributionChannel": "20"
+      }
+    ]
+  },
+  {
+    "SalesOrder": [
+      {
+        "YY1_SFPROJECTID_H": "LK00301631",
+        "YY1_SALESFORCEID_H": "500VD00000JhIoMYAV",
+        "YY1_SALESCHANNEL_H": " Sales Local ",
+        "YY1_REPENTITY_H": "",
+        "YY1_REPCOUNTRY_H": "LK",
+        "YY1_PERFORMANCE_H": "Client Performance Driven (ROI)",
+        "YY1_MNGENTITY_H": "",
+        "YY1_IOTYPE_H": "",
+        "YY1_CLIENT_POID_H": "",
+        "YY1_BUSUNITGRP_H": "TikTok",
+        "YY1_BUSINESSUNIT_H": "ABM",
+        "YY1_BATCHID_H": "a0qUj000002gWQXIB4",
+        "YY1_AGENCYID_H": "",
+        "YY1_ADVERTISERID_H": "GAG02YWHDS",
+        "TransactionCurrency": "EUR",
+        "SoldToParty": "GAG02YWHDS",
+        "SalesOrganization": "GRH1",
+        "SalesOrderType": "TA",
+        "SalesOrderItemsSet": [
+          "Delvr_TestBGAC"
+        ],
+        "SalesOrderItem": [
+          {
+            "YY1_SFDCLINEID_I": "Delvr_TestBGAC",
+            "YY1_SALESFORCEID_I": "Delvr_TestBGAC",
+            "YY1_PURENTITY_I": "",
+            "YY1_POID_I": "",
+            "YY1_LINEID_I": "",
+            "YY1_DELIVERYMONTH_I": "",
+            "YY1_BUSUNITGRP_I": "",
+            "YY1_BUSINESSUNIT_I": "ABM",
+            "YY1_BATCHID_I": "Delvr_TestBGAC",
+            "SalesOrderItem": "",
+            "PrepaymentRequestnumber": "TestBGAC",
+            "CreditMemoRequestItem": "",
+            "SalesOrder": "",
+            "RequestedQuantityUnit": "Auction",
+            "RequestedQuantity": 1,
+            "ProfitCenter": "TikTok",
+            "ProductionPlant": "GRH1",
+            "PricingElement": [
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "ConditionType": "ZSFN",
+                "ConditionRateValue": 2279,
+                "ConditionCurrency": "EUR"
+              }
+            ],
+            "Material": "REP",
+            "ItemText": [
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX03",
+                "LongText": "TikTok SL_TikTok_Atlas Axillia_Atlas Axillia Co. (Pvt) Ltd ",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX04",
+                "LongText": "00258744",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX07",
+                "LongText": "Atlas Axillia Co. (Pvt) Ltd Sri Lanka",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX08",
+                "LongText": "2024-12-01T00:00:00Z",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX09",
+                "LongText": "2024-12-31T00:00:00Z",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX10",
+                "LongText": "Atlas Axillia Company (Private) Ltd",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX12",
+                "LongText": "Auction In-Feed Video",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX13",
+                "LongText": "Dileena Fernando",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX14",
+                "LongText": "233.40",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX15",
+                "LongText": "292.583300",
+                "Language": "EN"
+              },
+              {
+                "SalesOrderItem": "",
+                "CreditMemoRequestItem": "",
+                "SalesOrder": "",
+                "LongTextID": "ZX16",
+                "LongText": "292.583300",
+                "Language": "EN"
+              }
+            ],
+            "ItemBillingBlockReason": ""
+          }
+        ],
+        "SalesOrder": "",
+        "CreditMemoRequest": "",
+        "PurchaseOrderByCustomer": "GRH1STPOH115",
+        "OrganizationDivision": "10",
+        "DistributionChannel": "20"
+      }
+    ]
+  }
+]

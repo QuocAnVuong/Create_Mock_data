@@ -4,73 +4,54 @@
             "YY1_SFPROJECTID_H": "LK00301631",
             "YY1_SALESFORCEID_H": "500VD00000JhIoMYAV",
             "YY1_SALESCHANNEL_H": "Traditional (Local Team)",
-            "YY1_REPENTITY_H": "MAC1",
+            "YY1_REPENTITY_H": "",
             "YY1_REPCOUNTRY_H": "LK",
             "YY1_PERFORMANCE_H": "Client Performance Driven (ROI)",
-            "YY1_MNGENTITY_H": "MAC1",
+            "YY1_MNGENTITY_H": "",
             "YY1_IOTYPE_H": "",
-            "YY1_CLIENT_POID_H": "Salesforce",
+            "YY1_CLIENT_POID_H": "",
             "YY1_BUSUNITGRP_H": "TikTok",
-            "YY1_BUSINESSUNIT_H": "",
+            "YY1_BUSINESSUNIT_H": "TIK",
             "YY1_BATCHID_H": "a0qUj000002gWQXIB4",
             "YY1_AGENCYID_H": "",
-            "YY1_ADVERTISERID_H": "EWWCKSMIYR",
-            "TransactionCurrency": "MAD",
-            "SoldToParty": "EWWCKSMIYR",
-            "SalesOrganization": "MAC1",
+            "YY1_ADVERTISERID_H": "GAG02YWHDS",
+            "TransactionCurrency": "EUR",
+            "SoldToParty": "TESTITI101",
+            "SalesOrganization": "ITI1",
             "SalesOrderType": "TA",
             "SalesOrderItemsSet": [
-                "ID_MAC_300901"
+                "TEST_ITI1_27"
             ],
             "SalesOrderItem": [
                 {
-                    "YY1_SFDCLINEID_I": "ID_MAC_300901",
-                    "YY1_SALESFORCEID_I": "ID_MAC_300901",
-                    "YY1_PURENTITY_I": "MAC1",
-                    "YY1_POID_I": "7447090504350892033",
-                    "YY1_LINEID_I": "LK00301631_TIK_001_001",
+                    "YY1_SFDCLINEID_I": "TEST_ITI1_27",
+                    "YY1_SALESFORCEID_I": "TEST_ITI1_27",
+                    "YY1_PURENTITY_I": "",
+                    "YY1_POID_I": "",
+                    "YY1_LINEID_I": "",
                     "YY1_DELIVERYMONTH_I": "",
-                    "YY1_BUSUNITGRP_I": "TikTok",
-                    "YY1_BUSINESSUNIT_I": "",
+                    "YY1_BUSUNITGRP_I": "",
+                    "YY1_BUSINESSUNIT_I": "TIK",
                     "YY1_BATCHID_I": "a0qUj000002gWQXIA2",
                     "SalesOrderItem": "",
-                    "Isprepayment": "Yes",
-                    "PrepaymentRequestnumber": "MAC_300901",
+                    "PrepaymentRequestnumber": "GRH1031025",
                     "CreditMemoRequestItem": "",
                     "SalesOrder": "",
                     "RequestedQuantityUnit": "Auction",
                     "RequestedQuantity": 1,
                     "ProfitCenter": "TikTok",
-                    "ProductionPlant": "MAC1",
+                    "ProductionPlant": "ITI1",
                     "PricingElement": [
                         {
                             "SalesOrderItem": "",
                             "CreditMemoRequestItem": "",
                             "SalesOrder": "",
-                            "ConditionType": "PC02",
-                            "ConditionRateValue": 1,
-                            "ConditionQuantityUnit": "Auction",
-                            "ConditionQuantity": 1,
-                            "ConditionCurrency": "MAD"
-                        },
-                        {
-                            "SalesOrderItem": "",
-                            "CreditMemoRequestItem": "",
-                            "SalesOrder": "",
                             "ConditionType": "ZSFN",
-                            "ConditionRateValue": 25000,
-                            "ConditionCurrency": "MAD"
-                        },
-                        {
-                            "SalesOrderItem": "",
-                            "CreditMemoRequestItem": "",
-                            "SalesOrder": "",
-                            "ConditionType": "ZPC0",
-                            "ConditionRateValue": 205.39,
-                            "ConditionCurrency": "MAD"
+                            "ConditionRateValue": 1000,
+                            "ConditionCurrency": "EUR"
                         }
                     ],
-                    "Material": "Rep",
+                    "Material": "REP",
                     "ItemText": [
                         {
                             "SalesOrderItem": "",
@@ -161,34 +142,12 @@
                             "Language": "EN"
                         }
                     ],
-                    "ItemBillingBlockReason": "",
-                    "to_billingplan": [
-                        {
-                            "SalesOrder": "",
-                            "SalesOrderItem": "",
-                            "BillingPlan": "",
-                            "BillingPlanIsInHeader": false
-                        },
-                        {
-                            "to_billingplanitem": [
-                                {
-                                    "SalesOrder": "",
-                                    "SalesOrderItem": "",
-                                    "BillingPlan": "",
-                                    "BillingPlanItem": "",
-                                    "BillingPlanDateCategory": "04",
-                                    "BillingPlanBillingDate": "2026-02-11T00:00:00",
-                                    "BillingPlanAmount": "25000.00",
-                                    "BillingBlockReason": ""
-                                }
-                            ]
-                        }
-                    ]
+                    "ItemBillingBlockReason": ""
                 }
             ],
             "SalesOrder": "",
             "CreditMemoRequest": "",
-            "PurchaseOrderByCustomer": "abcxyz",
+            "PurchaseOrderByCustomer": "GRH1STPOH115",
             "OrganizationDivision": "10",
             "DistributionChannel": "20"
         }
